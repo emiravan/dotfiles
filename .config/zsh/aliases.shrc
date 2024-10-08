@@ -1,0 +1,42 @@
+# ~/.config/zsh/aliases.shrc
+
+# ======================== Aliases ========================
+alias cl='clear'
+alias cat='bat'
+alias batt='bat --list-themes | fzf --preview="bat --theme={} --color=always /usr/include/stdio.h"'
+alias sc='systemctl'
+alias s='sudo'
+alias vim=nvim
+alias v=nvim
+alias grep='grep --color=auto'
+alias top='bpytop'
+alias ff='fastfetch'
+alias lg='lazygit'
+alias ldd='lazydocker'
+alias rm='trash-put'
+alias u='sudo pacman -Syu && yay'
+alias mutt='neomutt'
+alias m='neomutt'
+alias ai='gh copilot explain'
+alias t='zellij'
+
+# ======================== Navigation ========================
+alias cd='z'
+alias c='nvim ~/.config/'
+alias a='nvim ~/.config/zsh/aliases.shrc'
+alias q='exit'
+
+# ======================== Ls ========================
+alias ls="eza --color=always --group-directories-first --long --git --icons=always --no-user --no-permissions --no-time"
+alias ll='eza -la --color=always --group-directories-first --long --git --icons=always --no-user --no-permissions --no-time'
+alias l='eza -bGF --header --color=always --group-directories-first --long --git --icons=always --no-user --no-permissions --no-time'
+alias llm='eza -lbGd --header --sort=modified --color=always --group-directories-first --long --git --icons=always --no-user --no-permissions --no-time'
+alias la="eza --long --all --group --color=always --group-directories-first --long --git --icons=always --no-user --no-permissions --no-time"
+alias lt='eza --tree --level=2 --color=always --group-directories-first --icons'
+alias l.="eza -a | grep -E '^\.'"
+
+# ======================== Tmux ========================
+# alias t='tmux'
+# alias ta='tmux attach-session -t'
+# alias ts='tmux new-session -s'
+# alias tl='tmux ls'

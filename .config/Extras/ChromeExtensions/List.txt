@@ -1,0 +1,24 @@
+AI tree https://chromewebstore.google.com/detail/ai-tree/ndgomcamkdngodpaahnmommojckolclj
+Clipboard Inserter https://chromewebstore.google.com/detail/clipboard-inserter/deahejllghicakhplliloeheabddjajm
+BlackboxAI https://chromewebstore.google.com/detail/blackboxai/mcgbeeipkmelnpldkobichboakdfaeon
+Vimium https://chromewebstore.google.com/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb
+Octotree - GitHub code tree https://chromewebstore.google.com/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc
+CrxMouse: Mouse Gestures https://chromewebstore.google.com/detail/crxmouse-mouse-gestures/jlgkpaicikihijadgifklkbpdajbkhjo
+Dark Reader https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh
+Enhancer for Classroom™ https://chromewebstore.google.com/detail/enhancer-for-classroom/nbijdallbnpfkkglpdepfjdlelflfkdc
+Enhancer for YouTube™ https://chromewebstore.google.com/detail/enhancer-for-youtube/ponfpcnoihfmfllpaingbgckeeldkhle
+GitHub Isometric Contributions https://chromewebstore.google.com/detail/github-isometric-contribu/mjoedlfflcchnleknnceiplgaeoegien
+GitZip for github https://chromewebstore.google.com/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn
+GoFullPage - Full Page Screen Capture https://chromewebstore.google.com/detail/gofullpage-full-page-scre/fdpohaocaechififmbbbbbknoalclacl
+Grammarly: AI Writing and Grammar Checker App https://chromewebstore.google.com/detail/grammarly-ai-writing-and/kbfnbcaeplbcioakkpcpgfkobkghlhen
+Instant Data Scraper https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah
+Material Icons for GitHub https://chromewebstore.google.com/detail/material-icons-for-github/bggfcpfjbdkhfhfmkjpbhnkhnpjjeomc
+Mouse Tooltip Translator https://chromewebstore.google.com/detail/mouse-tooltip-translator/hmigninkgibhdckiaphhmbgcghochdjc
+Plasma Integration https://chromewebstore.google.com/detail/plasma-integration/cimiefiiaegbelhefglklhhakcgmhkai
+Prettier Lichess https://chromewebstore.google.com/detail/prettier-lichess/epgnobcgnmchnhgkgpedebbmhbblfcob
+Privacy Extension For WhatsApp Web https://chromewebstore.google.com/detail/privacy-extension-for-wha/jbojhlhhggfmmkpefknmbdhlaghehini
+Proton VPN: Fast & Secure https://chromewebstore.google.com/detail/proton-vpn-fast-secure/jplgfhpmjnbigmhklmmbgecoobifkmpa
+Return YouTube Dislike https://chromewebstore.google.com/detail/return-youtube-dislike/gebbhagfogifgggkldgodflihgfeippi
+SponsorBlock for YouTube - Skip Sponsorships https://chromewebstore.google.com/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone
+ThemeSong for YouTube Music™ (Enhancer) https://chromewebstore.google.com/detail/themesong-for-youtube-mus/bgfiegdbajagebogifobkhambpljbfmk
+Wappalyzer - Technology profiler https://chromewebstore.google.com/detail/wappalyzer-technology-pro/gppongmhjkpfnbhagpmjfkannfbllamg

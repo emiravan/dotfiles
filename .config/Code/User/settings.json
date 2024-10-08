@@ -1,0 +1,10 @@
+{
+    "workbench.colorTheme": "Solarized Osaka",
+    "editor.cursorBlinking": "smooth",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.fontFamily": "'MonoLisa Nerd Font'",
+    "editor.fontVariations": true,
+    "editor.fontLigatures": "'calt' on,'liga' on ,'ss01' on ,'ss07' on,'ss09' on,'ss11' on,'ss14' on,'ss16' on",  
+    "editor.fontSize": 14,
+    "editor.minimap.enabled": false,
+}

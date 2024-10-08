@@ -1,0 +1,225 @@
+format = """
+$os \ 
+[](color1)\
+$username\
+$python\
+[](bg:color2 fg:color1)\
+$directory\
+[](fg:color2 bg:color3)\
+$git_branch\
+$git_status\
+[](fg:color3 bg:color4)\
+$c\
+$elixir\
+$elm\
+$golang\
+$haskell\
+$java\
+$julia\
+$nodejs\
+$nim\
+$rust\
+[](fg:color4 bg:color5)\
+$docker_context\
+$conda\
+[](fg:color5 bg:color6)\
+$time\
+[ ](fg:color6)\
+$cmd_duration\
+$character\
+"""
+command_timeout = 5000
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+palette = 'solarized_osaka'
+
+[palettes.nord]
+color1 = '#3B4252'
+color2 = '#434C5E'
+color3 = '#4C566A'
+color4 = '#86BBD8'
+color5 = '#06969A'
+color6 = '#33658A'
+
+[palettes.endeavouros]
+color1 = '#FF7E7E'
+color2 = '#7E3FBE'
+color3 = '#7E7EFF'
+color4 = '#86BBD8'
+color5 = '#06969A'
+color6 = '#33658A'
+
+[palettes.solarized_osaka]
+color1 = '#001319'
+color2 = '#002B36'
+color3 = '#053642'
+color4 = '#576D74'
+color5 = '#647A83'
+color6 = '#9EABAC'
+
+[palettes.solarized_osaka2]
+color1 = '#654D00'
+color2 = '#A13D10'
+color3 = '#B6211D'
+color4 = '#AF2568'
+color5 = '#494FB5'
+color6 = '#196397'
+
+[palettes.kanagawa]
+color1 = '#0F1831'
+color2 = '#594F25'
+color3 = '#45401B'
+color4 = '#305F57'
+color5 = '#1D3D52'
+color6 = '#5B5545'
+
+[os]
+disabled = false
+style = "fg:#bg:color2"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+EndeavourOS = ""
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bg:color1"
+style_root = "bg:color1"
+format = '[$user ]($style)'
+
+[directory]
+home_symbol = "  "
+style = "bg:color2"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+# Here is how you can shorten some long paths by text replacement
+# similar to mapped_locations in Oh My Posh:
+[directory.substitutions]
+"Documents" = " 󰈙  "
+"Downloads" = "   "
+"Music" = " 󰝚  "
+"Pictures" = "   "
+"Workspace" = " 󰲋  "
+"Dropbox" = " 󰇣  "
+"Courses" = " 󰑴  "
+"nvim" = "   "
+".config" = "   "
+".minecraft" = " 󰍳  "
+# Keep in mind that the order matters. For example:
+# "Important Documents" = "  "
+# will not be replaced, because "Documents" was already substituted before.
+# So either put "Important Documents" before "Documents" or use the substituted version:
+# "Important  " = "  "
+
+[c]
+symbol = " "
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:color5"
+format = '[ $symbol $context ]($style) $path'
+
+[elixir]
+symbol = " "
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[git_branch]
+symbol = ""
+style = "bg:color3"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:color3"
+format = '[$all_status$ahead_behind ]($style)'
+
+[golang]
+symbol = " "
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[haskell]
+symbol = " "
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[java]
+symbol = " "
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[julia]
+symbol = " "
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[nodejs]
+symbol = ""
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[nim]
+symbol = " "
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+style = "bg:#color1"
+format = '[(\($virtualenv\) )]($style)'
+
+[conda]
+style = "bg:color_bg3"
+format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:color4"
+format = '[ $symbol ($version) ]($style)'
+
+[time]
+disabled = false
+time_format = "%R" # Hour:Minute Format
+style = "bg:color6 fg:#000000"
+format = '[ $time ]($style)'
+
+[cmd_duration]
+format = '\[[  $duration]($style)\]'
+style = "bg:color2"
+
+[character]
+disabled = false
+success_symbol = '[](bold fg:color_green)'
+error_symbol = '[](bold fg:color_red)'
+vimcmd_symbol = '[](bold fg:color_green)'
+vimcmd_replace_one_symbol = '[](bold fg:color_purple)'
+vimcmd_replace_symbol = '[](bold fg:color_purple)'
+vimcmd_visual_symbol = '[](bold fg:color_yellow)'
