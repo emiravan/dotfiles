@@ -65,37 +65,6 @@ yt() {
   bash -c "$command"
 }
 
-# ======================== Package Managers ========================
-function p() {
-  local manager=$(echo -e "Pacman\nYAY" | fzf --ansi --reverse)
-
-  if [[ "$manager" == "Pacman" ]]; then
-    local action=$(echo -e "Install\nRemove" | fzf --ansi --reverse)
-
-    if [[ "$action" == "Install" ]]; then
-      pacman -Ss | paste -d '' - - | fzf --multi --exact --reverse \
-        --preview 'pacman -Si {1}' --preview-window=right:40% | \
-        cut -d ' ' -f 1 | xargs -ro sudo pacman -Sy
-    elif [[ "$action" == "Remove" ]]; then
-      pacman -Q | paste -d '' - - | fzf --multi --exact --reverse \
-        --preview 'pacman -Qi {1}' --preview-window=right:40% | \
-        cut -d ' ' -f 1 | xargs -ro sudo pacman -Rns
-    fi
-  elif [[ "$manager" == "YAY" ]]; then
-    local action=$(echo -e "Install\nRemove" | fzf --ansi --reverse)
-
-    if [[ "$action" == "Install" ]]; then
-      yay -Ss | paste -d '' - - | fzf --multi --exact --reverse \
-        --preview 'yay -Si {1}' --preview-window=right:40% | \
-        cut -d ' ' -f 1 | xargs -ro yay -Sy
-    elif [[ "$action" == "Remove" ]]; then
-      yay -Q | paste -d '' - - | fzf --multi --exact --reverse \
-        --preview 'yay -Qi {1}' --preview-window=right:40% | \
-        cut -d ' ' -f 1 | xargs -ro yay -Rns
-    fi
-  fi
-}
-
 # ======================== Todo ========================
 # Alt + X: Mark selected task as complete
 # Alt + N: Add a new task
