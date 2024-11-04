@@ -1,7 +1,7 @@
 [user]
     excludesfile = ~/.gitignore
-	editor = nvim
-	ignorecase = false
+    editor = nvim
+    ignorecase = false
     name = emiravan
     email =
 
