@@ -18,8 +18,6 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
-opt.cursorlineopt = "both"
-
 -- Appaerance
 opt.termguicolors = true
 opt.background = "dark"
@@ -37,3 +35,13 @@ opt.splitbelow = true
 
 -- turn off swapfile
 opt.swapfile = false
+
+vim.api.nvim_exec(
+    [[
+  augroup YankHighlight
+    autocmd!
+    autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=300}
+  augroup END
+]],
+    false
+)

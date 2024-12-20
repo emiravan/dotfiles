@@ -42,7 +42,7 @@ dofile(vim.g.base46_cache .. "defaults")
 require("lualine").setup({
     options = {
         theme = "solarized_dark",
-        icons_enabled = false,
+        icons_enabled = true,
     },
     sections = {
         lualine_a = { "mode" },

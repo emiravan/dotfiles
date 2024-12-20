@@ -14,15 +14,4 @@ M.base46 = {
     },
 }
 
-M.ui = {
-    statusline = {
-        enabled = false,
-        theme = "vscode",
-        -- round and block will work for minimal theme only
-        separator_style = "",
-        order = nil,
-        modules = nil,
-    },
-}
-
 return M

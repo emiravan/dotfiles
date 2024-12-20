@@ -21,6 +21,9 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Center cursor while shift+g
+vim.keymap.set("n", "G", "Gzz")
+
 -- Add new line above/below without switching to insert mode
 map("n", "<CR>", "o<Esc>")
 map("n", "<S-CR>", "O<Esc>")

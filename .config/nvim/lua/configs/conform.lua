@@ -12,16 +12,20 @@ local options = {
         ["clang-format"] = {
             prepend_args = {
                 "-style={ \
-                    IndentWidth: 4, \
-                    TabWidth: 4, \
-                    UseTab: Never, \
-                    AccessModifierOffset: 0, \
-                    IndentAccessModifiers: true, \
-                    PackConstructorInitializers: Never, \
-                    ColumnLimit: 0, \
-                    PointerAlignment: Left}",
+        IndentCaseLabels: true, \
+        IndentWidth: 4, \
+        TabWidth: 4, \
+        UseTab: Never, \
+        AccessModifierOffset: 0, \
+        IndentAccessModifiers: false, \
+        ColumnLimit: 0, \
+        PointerAlignment: Left, \
+        AlignAfterOpenBracket: DontAlign, \
+        BreakBeforeBraces: Attach \
+    }",
             },
         },
+
         -- Golang
         ["goimports-reviser"] = {
             prepend_args = { "-rm-unused" },
@@ -49,7 +53,8 @@ local options = {
             prepend_args = {
                 "--fast",
                 "--line-length",
-                "80",
+                "100",
+                "--skip-string-normalization",
             },
         },
         isort = {

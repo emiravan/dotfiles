@@ -72,6 +72,11 @@ return {
     },
 
     {
+        "knubie/vim-kitty-navigator",
+        build = "cp ./*.py ~/.config/kitty/",
+    },
+
+    {
         "Djancyp/better-comments.nvim",
         lazy = false,
         config = function()
