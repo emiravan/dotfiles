@@ -1,6 +1,7 @@
-require("nvchad.mappings")
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
 
--- Scroll while keeping the cursor centered
 local map = vim.keymap.set
 
 -- Redefine default paste in visual mode (x mode) to paste without yanking selected text
@@ -27,17 +28,3 @@ vim.keymap.set("n", "G", "Gzz")
 -- Add new line above/below without switching to insert mode
 map("n", "<CR>", "o<Esc>")
 map("n", "<S-CR>", "O<Esc>")
-
--- Search and replace the word under cursor throughout the file
-vim.keymap.set(
-    "n",
-    "<leader>s",
-    [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]]
-)
-
-vim.keymap.set(
-    "n",
-    "<leader>q",
-    'ciw""<Esc>P',
-    { desc = "Word Surround Quotes" }
-)

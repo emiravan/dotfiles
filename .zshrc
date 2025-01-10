@@ -20,11 +20,12 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_VERIFY
 setopt SHARE_HISTORY
+export HISTIGNORE="clear:ls:yt:ytm:y:..:cd:ll:l"
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
 # ╒════════════════════════════════════════════════════════════╕
-# │                           THEME                            │
+# │                           APPEARANCE                       │
 # ╘════════════════════════════════════════════════════════════╛
 ZSH_THEME="dst"
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
@@ -35,7 +36,7 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 # ╒════════════════════════════════════════════════════════════╕
 # │                          PLUGINS                           │
 # ╘════════════════════════════════════════════════════════════╛
-plugins=(zsh-autosuggestions fast-syntax-highlighting zsh-autocomplete zsh-autopair)
+plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete zsh-autopair vi-mode)
 
 # OMZ
 source $ZSH/oh-my-zsh.sh
@@ -97,6 +98,7 @@ eval "$(zoxide init zsh)"
 alias cat='bat'
 alias rm='trash-put'
 alias cd='z'
+alias update='sudo pacman -Syu && yay'
 
 alias yt="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio/best'"
 alias yt720="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=720]+bestaudio/best'"
@@ -105,24 +107,24 @@ alias yt360="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=360]+b
 alias yt144="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=144]+bestaudio/best'"
 alias ytm="yt-dlp -o '~/Music/%(title)s.%(ext)s' -f bestaudio"
 
-alias ls="EXA_ICON_SPACING=2 eza --color=always --group-directories-first --long --git --icons=always --no-user --no-permissions --no-time"
+alias ls="EXA_ICON_SPACING=2 eza --color=always --group-directories-first --long --git-repos-no-status --icons=always --no-user --no-permissions --no-time"
 alias tree='EXA_ICON_SPACING=2 eza --tree --level=2 --color=always --group-directories-first --icons'
-alias dots="eza -a | grep -E '^\.'"
+alias tree+='EXA_ICON_SPACING=2 eza --tree --level=3 --color=always --group-directories-first --icons'
 
 # ╒════════════════════════════════════════════════════════════╕
 # │                         Conda                              │
 # ╘════════════════════════════════════════════════════════════╛
-__conda_setup="$('/home/emir/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/emir/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/emir/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/emir/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
+# __conda_setup="$('/home/emir/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+# if [ $? -eq 0 ]; then
+#     eval "$__conda_setup"
+# else
+#     if [ -f "/home/emir/miniconda3/etc/profile.d/conda.sh" ]; then
+#         . "/home/emir/miniconda3/etc/profile.d/conda.sh"
+#     else
+#         export PATH="/home/emir/miniconda3/bin:$PATH"
+#     fi
+# fi
+# unset __conda_setup
 
 # ╒════════════════════════════════════════════════════════════╕
 # │                          Yazi                              │
