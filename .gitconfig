@@ -1,18 +1,12 @@
 [user]
-    excludesfile = ~/.gitignore
-	editor = nvim
-	ignorecase = false
     name = emiravan
     email =
 
 [init]
     defaultBranch = main
 
-[hub]
-  protocol = https
-
 [github]
-	user = emiravan
+    user = emiravan
 
 [core]
     pager = delta
@@ -24,10 +18,4 @@
     line-numbers = true
     navigate = true
     side-by-side=true
-    syntax-theme = Solarized (dark)
-
-[merge]
-    conflictstyle = diff3
-
-[diff]
-    colorMoved = default
+    syntax-theme = Monokai Extended

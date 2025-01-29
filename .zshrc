@@ -7,20 +7,19 @@
 # ╘════════════════════════════════════════════════════════════╛
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="nvim"
-export BROWSER="brave"
 export MANPAGER="nvim +Man!"
 export GREP_OPTIONS="--color=auto"
+export PATH=/opt/homebrew/bin:$PATH
 
 # History
-HISTFILE=$HOME/.zhistory
-HISTSIZE=100000
-SAVEHIST=200000
+export HISTFILE=~/.zsh_history
+export HISTSIZE=10000
+export SAVEHIST=9999
+setopt SHARE_HISTORY
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
-setopt HIST_IGNORE_SPACE
 setopt HIST_VERIFY
-setopt SHARE_HISTORY
-export HISTIGNORE="clear:ls:yt:ytm:y:..:cd:ll:l"
+setopt HIST_IGNORE_SPACE
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
@@ -28,19 +27,23 @@ bindkey "^[[B" history-search-forward
 # │                           APPEARANCE                       │
 # ╘════════════════════════════════════════════════════════════╛
 ZSH_THEME="dst"
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
 export BAT_STYLE="plain"
-export BAT_THEME="Solarized (dark)"
+export BAT_THEME="Monokai Extended"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 # ╒════════════════════════════════════════════════════════════╕
 # │                          PLUGINS                           │
 # ╘════════════════════════════════════════════════════════════╛
-plugins=(zsh-autosuggestions zsh-syntax-highlighting zsh-autocomplete zsh-autopair vi-mode)
+plugins=(zsh-syntax-highlighting zsh-autosuggestions vi-mode web-search)
+
+# Optimize autosuggestions
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=50
+ZSH_AUTOSUGGEST_USE_ASYNC=1
 
 # OMZ
 source $ZSH/oh-my-zsh.sh
-zstyle ':omz:update' mode auto # update automatically without asking
+zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 13
 
 # ╒════════════════════════════════════════════════════════════╕
@@ -49,43 +52,43 @@ zstyle ':omz:update' frequency 13
 eval "$(fzf --zsh)"
 
 # Theme
-export FZF_DEFAULT_OPTS='
-    --color fg:-1,bg:-1,hl:#268bd2,fg+:#eee8d5,bg+:#073642,hl+:#268bd2
-    --color info:#b58900,prompt:#b58900,pointer:#fdf6e3,marker:#fdf6e3,spinner:#b58900
-'
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
+" --color=bg+:#383830,bg:#272822,spinner:#a1efe4,hl:#66d9ef"\
+" --color=fg:#a59f85,header:#66d9ef,info:#f4bf75,pointer:#a1efe4"\
+" --color=marker:#a1efe4,fg+:#f5f4f1,prompt:#f4bf75,hl+:#66d9ef"
 
-# Search
+# Use fd instead of fzf
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix --exclude .git"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 export FZF_ALT_C_COMMAND="fd --type=d --hidden --strip-cwd-prefix --exclude .git"
 
-# Preview
-show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
-export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
-export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
-export FZF_DEFAULT_OPTS="--bind 'ctrl-j:down,ctrl-k:up,alt-j:preview-down,alt-k:preview-up'"
-
-_fzf_comprun() {
-  local command=$1
-  shift
-
-  case "$command" in
-    cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
-    export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
-    ssh)          fzf --preview 'dig {}'                   "$@" ;;
-    *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
-  esac
-}
-
-# Custom
+# Use fd for listing path candidates.
 _fzf_compgen_path() {  fd --hidden --exclude .git . "$1"}
 
+# Use fd to generate the list for directory completion
 _fzf_compgen_dir() {  fd --type=d --hidden --exclude .git . "$1"}
 
 # Fzf-Git
 if [ -f ~/scripts/fzf-git.sh ]; then
-  source ~/scripts/fzf-git.sh
+    source ~/scripts/fzf-git.sh
 fi
+
+show_file_or_dir_preview="if [ -d {} ]; then eza --tree --color=always {} | head -200; else bat -n --color=always --line-range :500 {}; fi"
+
+export FZF_CTRL_T_OPTS="--preview '$show_file_or_dir_preview'"
+export FZF_ALT_C_OPTS="--preview 'eza --tree --color=always {} | head -200'"
+
+_fzf_comprun() {
+    local command=$1
+    shift
+
+    case "$command" in
+        cd)           fzf --preview 'eza --tree --color=always {} | head -200' "$@" ;;
+        export|unset) fzf --preview "eval 'echo \${}'"         "$@" ;;
+        ssh)          fzf --preview 'dig {}'                   "$@" ;;
+        *)            fzf --preview "$show_file_or_dir_preview" "$@" ;;
+    esac
+}
 
 # ╒════════════════════════════════════════════════════════════╕
 # │                        Zoxide                              │
@@ -96,38 +99,27 @@ eval "$(zoxide init zsh)"
 # │                        Aliases                             │
 # ╘════════════════════════════════════════════════════════════╛
 alias cat='bat'
-alias rm='trash-put'
 alias cd='z'
-alias update='sudo pacman -Syu && yay'
+alias v='nvim'
+alias c='clear'
+alias mkdir='mkdir -pv'
+alias update='brew update && brew upgrade'
+alias reload='source ~/.zshrc'
 
-alias yt="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio/best'"
-alias yt720="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=720]+bestaudio/best'"
-alias yt480="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=480]+bestaudio/best'"
-alias yt360="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=360]+bestaudio/best'"
-alias yt144="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=144]+bestaudio/best'"
+alias yt="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo+bestaudio'"
+alias yt1080="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio'"
+alias yt720="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=720]+bestaudio'"
+alias yt480="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=480]+bestaudio'"
+alias yt360="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=360]+bestaudio'"
+alias yt144="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=144]+bestaudio'"
 alias ytm="yt-dlp -o '~/Music/%(title)s.%(ext)s' -f bestaudio"
 
-alias ls="EXA_ICON_SPACING=2 eza --color=always --group-directories-first --long --git-repos-no-status --icons=always --no-user --no-permissions --no-time"
+alias ls="EXA_ICON_SPACING=2 eza --color=always --group-directories-first --long --icons=always --no-user --no-permissions --no-time"
+alias ll="ls -la"
 alias tree='EXA_ICON_SPACING=2 eza --tree --level=2 --color=always --group-directories-first --icons'
-alias tree+='EXA_ICON_SPACING=2 eza --tree --level=3 --color=always --group-directories-first --icons'
 
 # ╒════════════════════════════════════════════════════════════╕
-# │                         Conda                              │
-# ╘════════════════════════════════════════════════════════════╛
-# __conda_setup="$('/home/emir/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-# if [ $? -eq 0 ]; then
-#     eval "$__conda_setup"
-# else
-#     if [ -f "/home/emir/miniconda3/etc/profile.d/conda.sh" ]; then
-#         . "/home/emir/miniconda3/etc/profile.d/conda.sh"
-#     else
-#         export PATH="/home/emir/miniconda3/bin:$PATH"
-#     fi
-# fi
-# unset __conda_setup
-
-# ╒════════════════════════════════════════════════════════════╕
-# │                          Yazi                              │
+# │                           YAZI                             │
 # ╘════════════════════════════════════════════════════════════╛
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -136,4 +128,15 @@ function y() {
 		builtin cd -- "$cwd"
 	fi
 	rm -f -- "$tmp"
+}
+
+# ╒════════════════════════════════════════════════════════════╕
+# │                           FINDER                           │
+# ╘════════════════════════════════════════════════════════════╛
+function ofd {
+  if (( ! $# )); then
+    open_command $PWD
+  else
+    open_command $@
+  fi
 }

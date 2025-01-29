@@ -1,0 +1,45 @@
+{
+  "editor.fontFamily": "Iosevka Term SS04",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 18,
+  "terminal.integrated.fontSize": 18,
+  "debug.console.fontSize": 16,
+  "editor.minimap.enabled": false,
+  "editor.inlayHints.enabled": "off",
+  "editor.lineNumbers": "relative",
+  "editor.renderWhitespace": "trailing",
+  "editor.cursorStyle": "line-thin",
+  "workbench.tips.enabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "window.density.editorTabHeight": "compact",
+  "breadcrumbs.enabled": false,
+  "debug.console.fontFamily": "Iosevka Term SS04",
+  "window.commandCenter": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  // ╒════════════════════════════════════════════════════════════╕
+  // │                          VIM                               │
+  // ╘════════════════════════════════════════════════════════════╛
+  "vim.handleKeys": {
+    "<C-w>": false
+  },
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.highlightedyank.enable": true,
+  // TODO: Edit colors
+  "vim.highlightedyank.color": "rgba(219, 48, 45, 0.7)",
+  "vim.highlightedyank.textColor": "#BDCCCC",
+  "vim.highlightedyank.duration": 130,
+  "vim.smartRelativeLine": true,
+  // ╒════════════════════════════════════════════════════════════╕
+  // │                          SPELL                             │
+  // ╘════════════════════════════════════════════════════════════╛
+  "cSpell.language": "en,tr",
+  // ╒════════════════════════════════════════════════════════════╕
+  // │                          SETTINGS                          │
+  // ╘════════════════════════════════════════════════════════════╛
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "workbench.colorTheme": "Monokai Pro (Filter Ristretto)"
+}

@@ -1,12 +1,15 @@
 return {
-  -- add solarized-osaka
-  { "craftzdog/solarized-osaka.nvim" },
-
-  -- Configure LazyVim to load solarized osaka
+  {
+    "loctvl842/monokai-pro.nvim",
+    priority = 1000,
+    opts = {
+      filter = "ristretto",
+    },
+  },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "solarized-osaka",
+      colorscheme = "monokai-pro",
     },
   },
 }
