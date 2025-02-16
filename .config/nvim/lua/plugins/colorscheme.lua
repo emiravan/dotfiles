@@ -1,15 +1,12 @@
 return {
   {
-    "loctvl842/monokai-pro.nvim",
+    "cpea2506/one_monokai.nvim",
     priority = 1000,
-    opts = {
-      filter = "ristretto",
-    },
   },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "monokai-pro",
+      colorscheme = "one_monokai",
     },
   },
 }

@@ -1,5 +1,5 @@
 {
-  "editor.fontFamily": "Iosevka Term SS04",
+  "editor.fontFamily": "Iosevka Term SS04 Medium",
   "editor.fontLigatures": true,
   "editor.fontSize": 18,
   "terminal.integrated.fontSize": 18,
@@ -13,7 +13,7 @@
   "workbench.startupEditor": "newUntitledFile",
   "window.density.editorTabHeight": "compact",
   "breadcrumbs.enabled": false,
-  "debug.console.fontFamily": "Iosevka Term SS04",
+  "debug.console.fontFamily": "Iosevka Term SS04 Medium",
   "window.commandCenter": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
@@ -27,10 +27,9 @@
   "vim.hlsearch": true,
   "vim.useCtrlKeys": true,
   "vim.highlightedyank.enable": true,
-  // TODO: Edit colors
-  "vim.highlightedyank.color": "rgba(219, 48, 45, 0.7)",
-  "vim.highlightedyank.textColor": "#BDCCCC",
-  "vim.highlightedyank.duration": 130,
+  "vim.highlightedyank.color": "rgba(187, 187, 187, 0.3)",
+  "vim.highlightedyank.textColor": "#BBBBBB",
+  "vim.highlightedyank.duration": 250,
   "vim.smartRelativeLine": true,
   // ╒════════════════════════════════════════════════════════════╕
   // │                          SPELL                             │
@@ -41,5 +40,7 @@
   // ╘════════════════════════════════════════════════════════════╛
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  "workbench.colorTheme": "Monokai Pro (Filter Ristretto)"
+  "workbench.iconTheme": "a-file-icon-vscode",
+  "editor.bracketPairColorization.enabled": false,
+  "workbench.colorTheme": "One Monokai"
 }
