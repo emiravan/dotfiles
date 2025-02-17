@@ -1,5 +1,22 @@
 [
     // ╒════════════════════════════════════════════════════════════╕
+    // │                           PANELS                           │
+    // ╘════════════════════════════════════════════════════════════╛
+    {
+        "key": "ctrl+t",
+        "command": "workbench.action.terminal.toggleTerminal"
+    },
+    {
+        "key": "ctrl+a",
+        "command": "workbench.panel.chat",
+        "when": "workbench.panel.chat.view.copilot.active"
+    },
+    {
+        "key": "ctrl-e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
+    },
+    // ╒════════════════════════════════════════════════════════════╕
     // │                           NAVIGATION                       │
     // ╘════════════════════════════════════════════════════════════╛
     {
@@ -21,11 +38,6 @@
     {
         "key": "space ,",
         "command": "workbench.action.showAllEditors",
-        "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
-    },
-    {
-        "key": "space e",
-        "command": "workbench.action.toggleSidebarVisibility",
         "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
     },
     {

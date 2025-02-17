@@ -1,9 +1,9 @@
 {
   "editor.fontFamily": "Iosevka Term SS04 Medium",
   "editor.fontLigatures": true,
-  "editor.fontSize": 18,
-  "terminal.integrated.fontSize": 18,
-  "debug.console.fontSize": 16,
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "debug.console.fontSize": 13,
   "editor.minimap.enabled": false,
   "editor.inlayHints.enabled": "off",
   "editor.lineNumbers": "relative",
@@ -17,6 +17,7 @@
   "window.commandCenter": false,
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
+  "editor.cursorSurroundingLines": 8,
   // ╒════════════════════════════════════════════════════════════╕
   // │                          VIM                               │
   // ╘════════════════════════════════════════════════════════════╛

@@ -18,8 +18,8 @@ cursor-style = bar
 # │                           SPLIT                            │
 # ╘════════════════════════════════════════════════════════════╛
 keybind = ctrl+enter=new_split:right
-keybind = ctrl+shift+enter=new_split:down
-keybind = ctrl+backspace=close_surface
+keybind = ctrl+backspace=new_split:down
+keybind = ctrl+q=close_surface
 
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+l=goto_split:right
