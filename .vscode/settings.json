@@ -1,0 +1,48 @@
+{
+  // ╒════════════════════════════════════════════════════════════╕
+  // │                          APPEARANCE                        │
+  // ╘════════════════════════════════════════════════════════════╛
+  "editor.fontFamily": "Iosevka Term SS04 Medium",
+  "editor.fontLigatures": true,
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "debug.console.fontSize": 13,
+  "editor.minimap.enabled": false,
+  "editor.inlayHints.enabled": "off",
+  "editor.lineNumbers": "relative",
+  "editor.renderWhitespace": "trailing",
+  "editor.cursorStyle": "line-thin",
+  "workbench.tips.enabled": false,
+  "workbench.startupEditor": "newUntitledFile",
+  "window.density.editorTabHeight": "compact",
+  "breadcrumbs.enabled": false,
+  "debug.console.fontFamily": "Iosevka Term SS04 Medium",
+  "workbench.iconTheme": "a-file-icon-vscode",
+  "editor.bracketPairColorization.enabled": false,
+  "vim.highlightedyank.color": "rgba(187, 187, 187, 0.3)",
+  "vim.highlightedyank.textColor": "#BBBBBB",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 250,
+  // ╒════════════════════════════════════════════════════════════╕
+  // │                          VIM                               │
+  // ╘════════════════════════════════════════════════════════════╛
+  "vim.handleKeys": {
+    "<C-w>": false
+  },
+  "vim.useSystemClipboard": true,
+  "vim.hlsearch": true,
+  "vim.useCtrlKeys": true,
+  "vim.smartRelativeLine": true,
+  // ╒════════════════════════════════════════════════════════════╕
+  // │                          SETTINGS                          │
+  // ╘════════════════════════════════════════════════════════════╛
+  "explorer.confirmDragAndDrop": false,
+  "explorer.confirmDelete": false,
+  "window.commandCenter": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.cursorSurroundingLines": 8,
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+  "cSpell.language": "en,tr",
+  "workbench.colorTheme": "One Monokai",
+}
