@@ -1,12 +1,8 @@
 return {
-  {
-    "cpea2506/one_monokai.nvim",
-    priority = 1000,
-  },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "one_monokai",
-    },
-  },
+  "cpea2506/one_monokai.nvim",
+  config = function()
+    require("one_monokai").setup({
+      colors = { bg = "#1E1E1E" },
+    })
+  end,
 }

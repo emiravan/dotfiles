@@ -3,7 +3,7 @@
 cwd = { fg = "#61AFEF" }  # Blue
 
 # Hovered
-hovered = { bg = "#383E4A" }  # Darkened background
+hovered = { bg = "#252526" }  # Darkened background
 preview_hovered = { underline = true }
 
 # Find
@@ -17,18 +17,18 @@ marker_marked = { fg = "#ABB2BF", bg = "#56B6C2" }  # Light gray on cyan
 marker_selected = { fg = "#ABB2BF", bg = "#E5C07B" }  # Light gray on Orange
 
 # Tab
-tab_active = { bg = "#282C34", fg = "#61AFEF" }  # Darkened background, Blue text
+tab_active = { bg = "#1E1E1E", fg = "#61AFEF" }  # Darkened background, Blue text
 tab_inactive = {}
 tab_width = 1
 
 # Count
-count_copied = { fg = "#98C379", bg = "#282C34" }  # Green on Darkened background
-count_cut = { fg = "#E06C75", bg = "#282C34" }  # Red on Darkened background
-count_selected = { fg = "#98C379", bg = "#282C34" }  # Green on Darkened background
+count_copied = { fg = "#98C379", bg = "#1E1E1E" }  # Green on Darkened background
+count_cut = { fg = "#E06C75", bg = "#1E1E1E" }  # Red on Darkened background
+count_selected = { fg = "#98C379", bg = "#1E1E1E" }  # Green on Darkened background
 
 # Border
 border_symbol = "│"
-border_style = { fg = "#282C34" }  # Darkened background
+border_style = { fg = "#1E1E1E" }  # Darkened background
 
 # : }}}
 
@@ -36,17 +36,17 @@ border_style = { fg = "#282C34" }  # Darkened background
 [status]
 separator_open = ""
 separator_close = ""
-separator_style = { fg = "#61AFEF", bg = "#282C34" }  # Blue on Darkened background
+separator_style = { fg = "#61AFEF", bg = "#1E1E1E" }  # Blue on Darkened background
 
 # Mode
-mode_normal = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
-mode_select = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
-mode_unset = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
+mode_normal = { fg = "#1E1E1E", bg = "#61AFEF", bold = true }  # Dark gray on Blue
+mode_select = { fg = "#1E1E1E", bg = "#61AFEF", bold = true }  # Dark gray on Blue
+mode_unset = { fg = "#1E1E1E", bg = "#61AFEF", bold = true }  # Dark gray on Blue
 
 # Progress
 progress_label = { fg = "#ABB2BF", bold = true }  # Light gray
-progress_normal = { fg = "#98C379", bg = "#282C34" }  # Green on Darkened background
-progress_error = { fg = "#E06C75", bg = "#282C34" }  # Red on Darkened background
+progress_normal = { fg = "#98C379", bg = "#1E1E1E" }  # Green on Darkened background
+progress_error = { fg = "#E06C75", bg = "#1E1E1E" }  # Red on Darkened background
 
 # Permissions
 permissions_t = { fg = "#98C379" }  # Green
@@ -90,7 +90,7 @@ hovered = { fg = "#E5C07B", underline = true }  # Orange
 
 # : Which {{{
 [which]
-mask = { bg = "#282C34" }  # Darkened background
+mask = { bg = "#1E1E1E" }  # Darkened background
 cand = { fg = "#98C379" }  # Green
 rest = { fg = "#ABB2BF" }  # Light gray
 desc = { fg = "#E5C07B" }  # Orange

@@ -9,6 +9,7 @@ clipboard-write = allow
 # │                            APPEARANCE                      │
 # ╘════════════════════════════════════════════════════════════╛
 theme = OneHalfDark
+background = #1E1E1E
 font-family = Iosevka Term SS04
 font-style = Medium
 font-size = 16.0
