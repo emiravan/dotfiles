@@ -1,17 +1,13 @@
-# ╒════════════════════════════════════════════════════════════╕
-# │                        ~/.zshrc                            │
-# ╘════════════════════════════════════════════════════════════╛
-
-# ╒════════════════════════════════════════════════════════════╕
-# │                          GENERAL                           │
-# ╘════════════════════════════════════════════════════════════╛
+# === Environment Variables ===
 export ZSH="$HOME/.oh-my-zsh"
 export EDITOR="nvim"
+export PATH="/opt/homebrew/bin:$PATH"
+export C_INCLUDE_PATH="/opt/homebrew/include/SDL2"
+export LIBRARY_PATH="/opt/homebrew/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/openjdk@11/include"
 export MANPAGER="nvim +Man!"
-export GREP_OPTIONS="--color=auto"
-export PATH=/opt/homebrew/bin:$PATH
 
-# History
+# === History Settings ===
 export HISTSIZE=10000
 export SAVEHIST=9999
 setopt SHARE_HISTORY
@@ -20,59 +16,45 @@ setopt HIST_IGNORE_DUPS
 setopt HIST_VERIFY
 setopt HIST_IGNORE_SPACE
 
-# ╒════════════════════════════════════════════════════════════╕
-# │                           APPEARANCE                       │
-# ╘════════════════════════════════════════════════════════════╛
+# === Appearance & Style ===
 ZSH_THEME="dst"
 export BAT_STYLE="plain"
-export BAT_THEME="OneHalfDark"
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
-# ╒════════════════════════════════════════════════════════════╕
-# │                          PLUGINS                           │
-# ╘════════════════════════════════════════════════════════════╛
-plugins=(zsh-syntax-highlighting zsh-autocomplete web-search macos)
+# === Plugins ===
+plugins=(zsh-autocomplete zsh-syntax-highlighting web-search macos)
 
-# OMZ
+# === Oh-My-Zsh ===
 source $ZSH/oh-my-zsh.sh
 zstyle ':omz:update' mode auto
 zstyle ':omz:update' frequency 13
 
-# ╒════════════════════════════════════════════════════════════╕
-# │                           FZF                              │
-# ╘════════════════════════════════════════════════════════════╛
+# === External Tools ===
 eval "$(fzf --zsh)"
-
-export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS"\
-" --color=bg+:#353b45,bg:#1E1E1E,spinner:#56b6c2,hl:#61afef"\
-" --color=fg:#565c64,header:#61afef,info:#e5c07b,pointer:#56b6c2"\
-" --color=marker:#56b6c2,fg+:#b6bdca,prompt:#e5c07b,hl+:#61afef"
-
-# ╒════════════════════════════════════════════════════════════╕
-# │                        Zoxide                              │
-# ╘════════════════════════════════════════════════════════════╛
 eval "$(zoxide init zsh)"
 
-# ╒════════════════════════════════════════════════════════════╕
-# │                        Aliases                             │
-# ╘════════════════════════════════════════════════════════════╛
+# === Aliases ===
 alias cat='bat'
 alias cd='z'
+alias v='nvim'
+alias python='python3'
+alias update='brew update && brew upgrade'
 
-alias yt="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo+bestaudio'"
-alias yt1080="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio'"
-alias yt720="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=720]+bestaudio'"
-alias yt480="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=480]+bestaudio'"
-alias yt360="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=360]+bestaudio'"
-alias yt144="yt-dlp -o '~/Videos/%(title)s.%(ext)s' -f 'bestvideo[height<=144]+bestaudio'"
-alias ytm="yt-dlp -o '~/Music/%(title)s.%(ext)s' -f bestaudio"
+# yt-dlp presets
+alias yt="yt-dlp -o '~/Desktop/%(title)s.%(ext)s' -f 'bestvideo+bestaudio'"
+alias yt1080="yt-dlp -o '~/Desktop/%(title)s.%(ext)s' -f 'bestvideo[height<=1080]+bestaudio'"
+alias yt720="yt-dlp -o '~/Desktop/%(title)s.%(ext)s' -f 'bestvideo[height<=720]+bestaudio'"
+alias yt480="yt-dlp -o '~/Desktop/%(title)s.%(ext)s' -f 'bestvideo[height<=480]+bestaudio'"
+alias yt360="yt-dlp -o '~/Desktop/%(title)s.%(ext)s' -f 'bestvideo[height<=360]+bestaudio'"
+alias yt144="yt-dlp -o '~/Desktop/%(title)s.%(ext)s' -f 'bestvideo[height<=144]+bestaudio'"
+alias ytm="yt-dlp -o '~/Desktop/%(title)s.%(ext)s' -f bestaudio"
 
+# eza presets
 alias ls="EXA_ICON_SPACING=2 eza --color=always --group-directories-first --long --icons=always --no-user --no-permissions --no-time"
 alias tree='EXA_ICON_SPACING=2 eza --tree --level=2 --color=always --group-directories-first --icons'
+alias treee='EXA_ICON_SPACING=2 eza --tree --level=3 --color=always --group-directories-first --icons'
 
-# ╒════════════════════════════════════════════════════════════╕
-# │                           YAZI                             │
-# ╘════════════════════════════════════════════════════════════╛
+# yazi file manager wrapper with directory persistence
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -81,3 +63,16 @@ function y() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# === Conda Initialization ===
+__conda_setup="$('/opt/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/opt/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/opt/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/opt/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
