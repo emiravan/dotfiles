@@ -10,32 +10,36 @@
   "editor.minimap.enabled": false,
   "editor.inlayHints.enabled": "off",
   "editor.lineNumbers": "relative",
-  "editor.renderWhitespace": "trailing",
   "editor.cursorStyle": "line-thin",
-  "workbench.tips.enabled": false,
   "workbench.startupEditor": "newUntitledFile",
   "window.density.editorTabHeight": "compact",
-  "breadcrumbs.enabled": false,
   "debug.console.fontFamily": "Iosevka Term SS04 Medium",
-  "workbench.iconTheme": "a-file-icon-vscode",
   "editor.bracketPairColorization.enabled": false,
   "vim.highlightedyank.color": "rgba(187, 187, 187, 0.3)",
   "vim.highlightedyank.textColor": "#BBBBBB",
   "vim.highlightedyank.enable": true,
-  "vim.highlightedyank.duration": 250,
-  // ╒════════════════════════════════════════════════════════════╕
-  // │                          VIM                               │
-  // ╘════════════════════════════════════════════════════════════╛
-  "vim.handleKeys": {
-    "<C-w>": false
-  },
-  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.duration": 500,
   "vim.hlsearch": true,
-  "vim.useCtrlKeys": true,
-  "vim.smartRelativeLine": true,
+  "vim.useSystemClipboard": true,
   // ╒════════════════════════════════════════════════════════════╕
   // │                          SETTINGS                          │
   // ╘════════════════════════════════════════════════════════════╛
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    },
+  },
+  "[matlab]": {
+    "editor.defaultFormatter": "AffenWiesel.matlab-formatter",
+  },
+  "[c]": {
+    "editor.defaultFormatter": "keyhr.42-c-format"
+  },
+  "isort.args": [
+    "--profile",
+    "black"
+  ],
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
   "window.commandCenter": false,
@@ -44,5 +48,46 @@
   "editor.cursorSurroundingLines": 8,
   "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
   "cSpell.language": "en,tr",
-  "workbench.colorTheme": "Dark+ One Monokai",
+  "cSpell.diagnosticLevel": "Hint",
+  "window.autoDetectColorScheme": true,
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
+  "workbench.sideBar.location": "right",
+  "workbench.preferredLightColorTheme": "Gruvbox Material Light",
+  "workbench.preferredDarkColorTheme": "Gruvbox Material P Dark",
+  "editor.codeLens": false,
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "editor.accessibilitySupport": "on",
+  "accessibility.signals.positionHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasError": {
+    "sound": "off"
+  },
+  "accessibility.signals.positionHasWarning": {
+    "sound": "off"
+  },
+  "accessibility.signals.lineHasWarning": {
+    "sound": "off"
+  },
+  "errorLens.enabledDiagnosticLevels": [
+    "error",
+  ],
+  "editor.snippetSuggestions": "top",
+  "editor.unicodeHighlight.allowedLocales": {
+    "tr": true
+  },
+  "terminal.integrated.commandsToSkipShell": [
+    "matlab.interrupt"
+  ],
+  "MATLAB.installPath": "/Applications/MATLAB_R2024b.app",
+  "files.insertFinalNewline": true,
+  "42header.email": "emiravann@gmail.com",
+  "42header.username": "emiravan",
+  "geminicodeassist.inlineSuggestions.enableAuto": true,
+  "diffEditor.codeLens": true,
 }

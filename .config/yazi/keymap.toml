@@ -1,26 +1,8 @@
-"$schema" = "https://yazi-rs.github.io/schemas/keymap.json"
-
-[[manager.prepend_keymap]]
-on   = [ "g", "v" ]
-run  = "cd ~/Videos"
-desc = "Goto ~/Videos"
-
-[[manager.prepend_keymap]]
-on   = [ "g", "w" ]
-run  = "cd ~/Workspace"
-desc = "Goto ~/Workspace"
-
-[[manager.prepend_keymap]]
-on   = [ "g", "m" ]
-run  = "cd ~/Music"
-desc = "Goto ~/Music"
-
-[[manager.prepend_keymap]]
-on   = [ "g", "D" ]
-run  = "cd ~/Documents/"
-desc = "Goto ~/Documents"
-
-[[manager.prepend_keymap]]
-on   = [ "?" ]
-run  = "help"
-desc = "Help"
+[mgr]
+prepend_keymap = [
+    { on = "<Esc>",      run = "quit",                          desc = "Exit the process" },
+    { on = [ "?" ],      run = "help",                          desc = "Help" },
+    { on = [ "g", "d" ], run = "cd ~/Desktop/",                 desc = "Goto ~/Desktop" },
+    { on = [ "c", "a" ], run = "plugin compress",               desc = "Archive selected files" },
+    { on = [ "c", "p" ], run = "plugin compress -p",            desc = "Archive selected files (password)" },
+]

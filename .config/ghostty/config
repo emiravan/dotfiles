@@ -1,31 +1,15 @@
-# ╒════════════════════════════════════════════════════════════╕
-# │              # ~/.config/ghostty/config                    │
-# ╘════════════════════════════════════════════════════════════╛
-shell-integration = zsh
 clipboard-read = allow
 clipboard-write = allow
 
-# ╒════════════════════════════════════════════════════════════╕
-# │                            APPEARANCE                      │
-# ╘════════════════════════════════════════════════════════════╛
-theme = OneHalfDark
-background = #1E1E1E
+theme = dark:gruvbox-material-hard-dark ,light:gruvbox-material-hard-light
+background-opacity = 0.9
+background-blur = true
 font-family = Iosevka Term SS04
 font-style = Medium
 font-size = 16.0
-cursor-style = bar
-
-# ╒════════════════════════════════════════════════════════════╕
-# │                           SPLIT                            │
-# ╘════════════════════════════════════════════════════════════╛
-keybind = ctrl+enter=new_split:right
-keybind = ctrl+backspace=new_split:down
-keybind = ctrl+q=close_surface
 
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+l=goto_split:right
 keybind = ctrl+j=goto_split:bottom
 keybind = ctrl+k=goto_split:top
 focus-follows-mouse = true
-
-keybind = ctrl+equal=toggle_split_zoom
