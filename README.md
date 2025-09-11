@@ -128,19 +128,139 @@ cp vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.
 cd .. && rm -rf dot-files
 ```
 
----
+## 4. VS Code Extensions
 
-## 4. Important
+### VIM !
+- [Vim](https://marketplace.visualstudio.com/items?itemName=vscodevim.vim) — Vim keybindings for VS Code.
 
-To make the VS Code Vim extension work properly, run the following command to disable the press-and-hold feature on macOS:
+- To make the VS Code Vim extension work properly, run the following command 
 
 ```bash
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 ```
 
+### AI
+
+- [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=github.copilot) — AI-powered code completion.
+- [Intellicode](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.vscodeintellicode) — AI-assisted code completions.
+- [Intellicode API Usage Examples](https://marketplace.visualstudio.com/items?itemName=visualstudioexptteam.intellicode-api-usage-examples) — API usage examples powered by AI.
+
+### UI
+
+- [Sonokai](https://marketplace.visualstudio.com/items?itemName=sainnhe.sonokai) — Colorful dark theme.
+- [Min Theme](https://marketplace.visualstudio.com/items?itemName=miguelsolorio.min-theme) — Minimal VS Code theme.
+- [Material Icon Theme](https://marketplace.visualstudio.com/items?itemName=pkief.material-icon-theme) — File icon theme.
+- [Todo Tree](https://marketplace.visualstudio.com/items?itemName=gruntfuggly.todo-tree) — Highlights TODOs, FIXMEs, etc.
+- [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens) — Highlights errors and warnings inline.
+- [Typing Sounds](https://marketplace.visualstudio.com/items?itemName=mtuan.typing-sounds) — Adds keyboard sounds.
+- [VSCode Animations](https://marketplace.visualstudio.com/items?itemName=brandonkirbyson.vscode-animations) — Adds animations to VS Code.
+- [Custom UI Style](https://marketplace.visualstudio.com/items?itemName=subframe7536.custom-ui-style) — Customizes VS Code UI.
+> **Note For Custom UI Style:**  
+> To hide the top bar in VS Code, you can enable the relevant setting (currently commented out) in [settings.json](Library/Application%20Support/Code/User/settings.json)
+
+### Note-Taking
+
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one) — Markdown editing enhancements.
+- [Markdown Preview Github Styles](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles) — GitHub-style markdown preview.
+- [Markdown Mermaid](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid) — Mermaid diagrams in markdown.
+- [Markmap](https://marketplace.visualstudio.com/items?itemName=gera2ld.markmap-vscode) — Visualizes markdown as mindmaps.
+- [Excalidraw Editor](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor) — Excalidraw diagrams in VS Code.
+
+### Python
+
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) — Python language support.
+- [MagicPython](https://marketplace.visualstudio.com/items?itemName=magicstack.magicpython) — Improved Python syntax highlighting.
+- [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) — Jupyter notebook support.
+- [Data Wrangler](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.datawrangler) — Data cleaning and transformation tool.
+
+### C/C++
+
+- [CMake](https://marketplace.visualstudio.com/items?itemName=twxs.cmake) — CMake language support.
+- [Makefile Tools](https://marketplace.visualstudio.com/items?itemName=ms-vscode.makefile-tools) — Makefile support.
+- [C/C++ Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools-extension-pack) — Collection of C/C++ extensions.
+- [C++ Snippets](https://marketplace.visualstudio.com/items?itemName=hars.cppsnippets) — Useful C++ code snippets.
+
+### Formatters
+
+- [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) — Formatter.
+- [42 Header](https://marketplace.visualstudio.com/items?itemName=kube.42header) — Adds 42 school header to files.
+- [42 C Format](https://marketplace.visualstudio.com/items?itemName=keyhr.42-c-format) — C code formatter for 42 school.
+- [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) — Spell checker.
+- [Code Spell Checker: Turkish](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker-turkish) — Turkish language support for spell checker.
+- [autopep8](https://marketplace.visualstudio.com/items?itemName=ms-python.autopep8) — Python code formatter.
+
 ---
 
-## 5. Browser Extensions
+## 5. VS Code Keybindings
+
+Below is a my custom keybindings for VS Code
+
+> **Note:** I do not use some default Vim keybindings, so I have reassigned certain keys to other actions. There may still be mistakes or inconsistencies in the keybindings listed above.
+
+| Key(s)         | Action / Command                                      | Description                |
+|----------------|-------------------------------------------------------|----------------------------|
+| `ctrl+t`       | Toggle Terminal                                       | [T]erminal                 |
+| `ctrl+i`       | Toggle Chat                                           |                            |
+| `ctrl-s`       | Toggle Sidebar                                        | [S]idebar                  |
+| `ctrl+u`       | Scroll Up Half Page + Center Cursor                   |                            |
+| `ctrl+d`       | Scroll Down Half Page + Center Cursor                 |                            |
+| `q`            | Save & Close Editor                                   | [Q]uit & save              |
+| `f`            | Toggle Maximize Editor Group                          | [F]ullscreen               |
+| `space c a`    | Code Action                                           | [C]ode [A]ction            |
+| `space c r`    | Rename Symbol                                         | [C]ode [R]ename            |
+| `space c s`    | Go to Symbol                                          | [C]ode [S]ymbol            |
+| `space space`  | Quick Open                                            |                            |
+| `space g d`    | Go to Definition                                      | [G]o to [D]efinition       |
+| `space g r`    | Go to References                                      | [G]o to [R]eferences       |
+| `space g i`    | Go to Implementation                                 | [G]o to [I]mplementation   |
+| `shift-m`      | Previous Marker                                       | [M]arker previous          |
+| `m`            | Next Marker                                           | [M]arker next              |
+| `s`            | Split Editor                                          | [S]plit                    |
+| `shift-s`      | Split Editor Down                                     | [S]plit down               |
+| `shift-k`      | Show Hover / Move Lines Up                            | [K]nowledge / Move up      |
+| `shift-j`      | Move Lines Down                                       | Move down                  |
+| `ctrl-h/l/k/j` | Navigate Left/Right/Up/Down Pane                      |                            |
+| `tab`          | Next Tab / Suggestion                                 |                            |
+| `shift-tab`    | Previous Tab / Suggestion                             |                            |
+| `1`-`9`        | Open Tab at Index 1-9                                 |                            |
+| `r`            | Rename File (Explorer)                                | [R]ename                   |
+| `c`            | Copy File (Explorer)                                  | [C]opy                     |
+| `p`            | Paste File (Explorer)                                 | [P]aste                    |
+| `x`            | Cut File (Explorer)                                   |                            |
+| `d`            | Delete File (Explorer)                                | [D]elete                   |
+| `a`            | New File (Explorer)                                   |                            |
+| `shift-a`      | New Folder (Explorer)                                 |                            |
+| `s`            | Open to Side (Explorer)                               | [S]ide                     |
+| `shift-s`      | Split Down & Open (Explorer)                          | [S]ide                     |
+| `enter`        | Open File / Toggle Folder (Explorer)                  |                            |
+| `n`            | Next Word Highlight / Debug Step Over                 | [N]ext step                |
+| `shift+n`      | Previous Word Highlight / Debug Continue              | [N]ext breakpoint          |
+| `t`            | Markdown Preview / Toggle Breakpoint                  | [T]oggle preview / [T]ag   |
+| `m`            | Markmap Mind Map                                      | [M]ind map                 |
+| `escape`       | Stop Debug / Close Markers Navigation                 |                            |
+| `ctrl-c`       | Stop Debug                                            |                            |
+| `r`            | Start Debug                                           | [R]un                      |
+| `shift-r`      | Select & Start Debug                                  | [R]un                      |
+
+**Markdown-specific:**
+- `t` in markdown: Toggle preview
+- `m` in markdown: Open mind map
+
+**Vim Search:**
+- `n` / `shift+n`: Next/Previous word highlight
+
+**File Explorer:**
+- `r`, `c`, `p`, `x`, `d`, `a`, `shift-a`, `s`, `shift-s`, `enter`: File operations
+
+**Tabs:**
+- `tab`, `shift-tab`, `1`-`9`: Tab navigation
+
+**Debugging:**
+- `t`, `r`, `shift-r`, `escape`, `ctrl-c`, `n`, `shift+n`: Debug actions
+
+> See `keybindings.json` for full details and context conditions.
+
+## 6. Browser Extensions
 
 ### Safari
 
@@ -229,7 +349,7 @@ map ? enterFindMode
 
 ---
 
-## 6. Excalidraw Library
+## 7. Excalidraw Library
 
 With the [Excalidraw extension](https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor) in VS Code, I use [my own Excalidraw library](Extra/library.excalidrawlib) to work with Excalidraw more efficiently.
 

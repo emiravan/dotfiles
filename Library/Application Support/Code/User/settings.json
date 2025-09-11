@@ -42,23 +42,23 @@
   "breadcrumbs.icons": false,
 
   // HIDE TOP BAR
-  "window.customTitleBarVisibility": "never",
-  "window.titleBarStyle": "native",
-  "custom-ui-style.electron": {
-    "frame": false
-  },
-  "custom-ui-style.stylesheet": {
-    ".monaco-workbench": {
-      "&:not(.fullscreen)": {
-        ".activitybar, .statusbar, .tabs-container, .sidebar .composite.title": {
-          "-webkit-app-region": "drag",
-          ".content .monaco-action-bar, .statusbar-item, .tab, .title .title-actions .action-label": {
-            "-webkit-app-region": "no-drag"
-          }
-        }
-      }
-    }
-  },
+  // "window.customTitleBarVisibility": "never",
+  // "window.titleBarStyle": "native",
+  // "custom-ui-style.electron": {
+  //   "frame": false
+  // },
+  // "custom-ui-style.stylesheet": {
+  //   ".monaco-workbench": {
+  //     "&:not(.fullscreen)": {
+  //       ".activitybar, .statusbar, .tabs-container, .sidebar .composite.title": {
+  //         "-webkit-app-region": "drag",
+  //         ".content .monaco-action-bar, .statusbar-item, .tab, .title .title-actions .action-label": {
+  //           "-webkit-app-region": "no-drag"
+  //         }
+  //       }
+  //     }
+  //   }
+  // },
 
   // ANIMATIONS
   "editor.cursorBlinking": "smooth",
