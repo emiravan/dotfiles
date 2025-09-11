@@ -54,8 +54,8 @@ The following packages are mainly used for my personal projects involving C++/Op
 - [cmake](https://cmake.org/) &mdash; Build automation tool.
 - [glew](http://glew.sourceforge.net/) &mdash; OpenGL Extension Wrangler Library.
 - [glow](https://github.com/grovesNL/glow) &mdash; Cross-platform OpenGL bindings.
-- [sdl2](https://www.libsdl.org/) &mdash; Simple DirectMedia Layer 2.
-- [sdl2_image](https://www.libsdl.org/projects/SDL_image/) &mdash; Image loading library for SDL2.
+- [sdl2](https://github.com/libsdl-org/SDL) &mdash; Simple DirectMedia Layer 2.
+- [sdl2_image](https://github.com/libsdl-org/SDL_image) &mdash; Image loading library for SDL2.
 
 #### To Install All
 
@@ -67,13 +67,12 @@ brew install cmake eza fzf glew glow sdl2 sdl2_image yazi yt-dlp zoxide
 
 ### Homebrew Cask Applications
 
-
-- [blip](https://blip.computer/) &mdash; Minimalist ambient sound app.
-- [chatgpt](https://github.com/lencx/ChatGPT) &mdash; Unofficial ChatGPT desktop client.
-- [cloudflare-warp](https://1.1.1.1/) &mdash; Secure VPN by Cloudflare.
+- [blip](https://blip.net) &mdash; Cross platform file transfer.
+- [chatgpt](https://chatgpt.com/features/desktop/) &mdash; ChatGPT desktop client.
+- [cloudflare-warp](https://1.1.1.1/) &mdash; VPN.
 - [discord](https://discord.com/) &mdash; Voice and text chat for communities.
 - [fliqlo](https://fliqlo.com/) &mdash; Flip clock screensaver.
-- [font-lilex-nerd-font](https://www.nerdfonts.com/font-downloads) &mdash; Developer-friendly font.
+- [font-lilex-nerd-font](https://github.com/mishamyrt/Lilex) &mdash; Developer-friendly font.
 - [iina](https://iina.io/) &mdash; Modern media player for macOS.
 - [keka](https://www.keka.io/) &mdash; File archiver for macOS.
 - [logi-options+](https://www.logitech.com/en-us/software/logi-options-plus.html) &mdash; Logitech device customization.
@@ -237,3 +236,4 @@ With the [Excalidraw extension](https://marketplace.visualstudio.com/items?itemN
 <p align="center">
     <img src="Images/excalidraw-library.png" alt="Excalidraw Library Preview" width="60%"/>
 </p>
+
