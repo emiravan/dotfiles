@@ -99,7 +99,7 @@
   // ======= LEADER BINDS ========
   // =============================
   {
-    "key": "q", // [Q]uit & save
+    "key": "q", // [Q]uit
     "command": "runCommands",
     "args": {
       "commands": [
@@ -107,12 +107,12 @@
         "workbench.action.closeActiveEditor"
       ]
     },
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal' && (editorTextFocus || activeWebviewPanelId == 'markdown.preview')"
   },
   {
     "key": "f", // [F]ullscreen
     "command": "workbench.action.toggleMaximizeEditorGroup",
-    "when": "(editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups) && vim.mode == 'Normal' && editorTextFocus"
+    "when": "(editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups) && vim.mode == 'Normal' && (editorTextFocus || activeWebviewPanelId == 'markdown.preview')"
   },
   {
     "key": "space c a", // [C]ode [A]ction

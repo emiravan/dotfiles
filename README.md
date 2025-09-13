@@ -264,9 +264,8 @@ Below is a my custom keybindings for VS Code
 
 ### Safari
 
-- [Octotree](https://apps.apple.com/us/app/octotree/id1457450145?mt=12) &mdash; GitHub code tree navigation enhancement.
-- [SponsorBlock for Safari](https://apps.apple.com/us/app/sponsorblock-for-safari/id1573461917) &mdash; Skip sponsorships on YouTube videos.
 - [uBlock Origin Lite](https://apps.apple.com/us/app/ublock-origin-lite/id6745342698) &mdash; Ad Block.
+- [SponsorBlock for Safari](https://apps.apple.com/us/app/sponsorblock-for-safari/id1573461917) &mdash; Skip sponsorships on YouTube videos.
 - [Vimlike](https://apps.apple.com/us/app/vimlike/id1584519802) &mdash; Vim-style keyboard navigation.
 
 <details>
@@ -312,8 +311,8 @@ settings.map('ctrl+c', VLCommand.NORMAL_MODE);
 ### Chromium
 
 - [uBlock Origin Lite](https://chrome.google.com/webstore/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh) &mdash; Efficient ad blocking.
-- [GitZip for GitHub](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn) &mdash; Download files from GitHub repositories as zip files.
 - [SponsorBlock for YouTube](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone) &mdash; Skip sponsorships on YouTube videos.
+- [GitZip for GitHub](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn) &mdash; Download files from GitHub repositories as zip files.
 - [Octotree - GitHub code tree](https://chrome.google.com/webstore/detail/octotree-github-code-tree/bkhaagjahfmjljalopjnoealnfndnagc) &mdash; GitHub code tree navigation enhancement.
 - [Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb) &mdash; Vim-style keyboard navigation.
 
