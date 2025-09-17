@@ -308,8 +308,8 @@ map b goBack
 map w goForward
 map o Vomnibar.activateBookmarks
 map O Vomnibar.activateBookmarksInNewTab
-map <tab> nextTab
-map <s-tab> previousTab
+map h previousTab
+map l nextTab
 map t createTab
 map q removeTab
 map Q restoreTab
@@ -321,9 +321,9 @@ map ? enterFindMode
 
 ---
 
-## 7. Bookmarks Bar
+## 7. Bookmarks
 
-- [Excalidraw](https://excalidraw.com)
+- [Draw](https://excalidraw.com)
 - [YouTube](https://youtube.com)
 - [Gemini](https://gemini.google.com)
 - [Task](https://tasks.google.com) — Google Tasks
@@ -333,21 +333,34 @@ map ? enterFindMode
 - [Drive](https://drive.google.com) — Google Drive
 - [GitHub](https://github.com)
 - [Trend](https://github.com/trending?since=monthly) — GitHub Trending Repositories (Monthly)
-- [X](https://x.com)
 - [News](https://hackerweb.app) — Hacker News
 - [Band](https://bandcamp.com/discover) — Bandcamp
 - [Netflix](https://netflix.com)
+- [HBO](https://www.hbomax.com) — HBO Max
 - [Disney+](https://disneyplus.com)
-- [BTK](https://www.btkakademi.gov.tr/portal) — BTK Akademi
 - [Geo](https://geoguessr.com) — GeoGuessr
 - [Chess](https://lichess.org/) — Lichess
+- [AI](https://huggingface.co) — Hugging Face
+- [Instagram](https://instagram.com)
+- [Kick](https://kick.com)
+- [Reddit](https://reddit.com)
+- [X](https://x.com)
+- [BTK](https://www.btkakademi.gov.tr/portal) — BTK Akademi
 
 ---
 
-## 8. Excalidraw Library
+## 8. Excalidraw
 
 My Excalidraw library includes custom shapes and diagrams. You can add it to Excalidraw using the [`Extra/library.excalidrawlib`](Extra/library.excalidrawlib).
 
 ![Excalidraw Library Example](Images/excalidraw.png)
+
+---
+
+## 9. Shortcuts
+
+- [OCR](https://www.icloud.com/shortcuts/5e3090a8d4b0457da506f48e745a2028) — Copies text from the screen.
+
+> I recommend assigning the shortcut to `Cmd + Shift + 2` for quick access.
 
 ---
