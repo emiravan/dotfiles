@@ -47,7 +47,6 @@
   // FORMATTING
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
-  "files.autoSave": "onFocusChange",
   "[python]": {
     "editor.defaultFormatter": "ms-python.autopep8"
   },

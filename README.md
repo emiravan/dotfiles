@@ -212,41 +212,21 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 ## 5. VS Code Keybindings
 
 Below is my custom [`keybindings`](Library/Application%20Support/Code/User/keybindings.json) for VS Code.  
-
-> **Note:** I do not use some default Vim keybindings, so I have reassigned certain keys to other actions. There may still be mistakes or inconsistencies in the keybindings listed above.
+> **Note:** Some default Vim keybindings are not used, and certain keys are reassigned for productivity. See below for updated keybinds.
 
 | Key(s)         | Action / Command                                      | Description                |
 |----------------|-------------------------------------------------------|----------------------------|
 | `ctrl+t`       | Toggle Terminal                                       | [T]erminal                 |
 | `ctrl+i`       | Toggle Chat                                           |                            |
 | `ctrl-s`       | Toggle Sidebar                                        | [S]idebar                  |
-| `ctrl+u`       | Scroll Up Half Page + Center Cursor                   |                            |
+| `ctrl+u`       | Scroll Up Half Page  Center Cursor                   |                            |
 | `ctrl+d`       | Scroll Down Half Page + Center Cursor                 |                            |
+| `f`            | Toggle Maximize Editor Group                          | [F]ullscreen (editor)      |
+| `shift+f`      | Toggle Fullscreen Window                             | [F]ullscreen (window)      |
 | `q`            | Save & Close Editor                                   | [Q]uit & save              |
-| `f`            | Toggle Maximize Editor Group                          | [F]ullscreen               |
-| `space c a`    | Code Action                                           | [C]ode [A]ction            |
-| `space c r`    | Rename Symbol                                         | [C]ode [R]ename            |
-| `space c s`    | Go to Symbol                                          | [C]ode [S]ymbol            |
-| `space space`  | Quick Open                                            |                            |
-| `space g d`    | Go to Definition                                      | [G]o to [D]efinition       |
-| `space g r`    | Go to References                                      | [G]o to [R]eferences       |
-| `space g i`    | Go to Implementation                                 | [G]o to [I]mplementation   |
-| `shift-m`      | Previous Marker                                       | [M]arker previous          |
-| `m`            | Next Marker                                           | [M]arker next              |
-| `s`            | Split Editor                                          | [S]plit                    |
-| `shift-s`      | Split Editor Down                                     | [S]plit down               |
-| `shift-k`      | Show Hover / Move Lines Up                            | [K]nowledge / Move up      |
-| `shift-j`      | Move Lines Down                                       | Move down                  |
-| `ctrl-h/l/k/j` | Navigate Left/Right/Up/Down Pane                      |                            |
-| `tab`          | Next Tab / Suggestion                                 |                            |
-| Key(s)         | Action / Command                                      | Description                |
-| `ctrl+t`       | Toggle Terminal                                       | [T]erminal                 |
-| `ctrl+i`       | Toggle Chat                                           |                            |
-| `ctrl-s`       | Toggle Sidebar                                        | [S]idebar                  |
-| `ctrl+u`       | Scroll Up Half Page + Center Cursor                   |                            |
-| `ctrl+d`       | Scroll Down Half Page + Center Cursor                 |                            |
-| `q`            | Save & Close Editor                                   | [Q]uit & save              |
-| `f`            | Toggle Maximize Editor Group                          | [F]ullscreen               |
+| `shift+q`      | Close Other Editors                                   | [Q]uit others              |
+| `t`            | Save Current File                                     | Wri[T]e file               |
+| `shift+t`      | Save All Files                                        | Wri[T]e all                |
 | `space c a`    | Code Action                                           | [C]ode [A]ction            |
 | `space c r`    | Rename Symbol                                         | [C]ode [R]ename            |
 | `space c s`    | Go to Symbol                                          | [C]ode [S]ymbol            |
@@ -255,16 +235,17 @@ Below is my custom [`keybindings`](Library/Application%20Support/Code/User/keybi
 | `space g r`    | Go to References                                      | [G]o to [R]eferences       |
 | `space g i`    | Go to Implementation                                  | [G]o to [I]mplementation   |
 | `shift-m`      | Previous Marker                                       | [M]arker previous          |
-| `m`            | Next Marker / Markmap Mind Map                        | [M]arker next / [M]ind map |
-| `s`            | Split Editor / Open to Side (Explorer)                | [S]plit / [S]ide           |
-| `shift-s`      | Split Editor Down / Split Down & Open (Explorer)      | [S]plit down / [S]ide      |
+| `m`            | Next Marker                                           | [M]arker next              |
+| `s`            | Split Editor / Markdown Preview / Open to Side        | [S]plit / [S]ide           |
+| `shift-s`      | Split Editor Down / Mind Map / Open to Side           | [S]plit down / [S]ide      |
 | `shift-k`      | Show Hover / Move Lines Up                            | [K]nowledge / Move up      |
 | `shift-j`      | Move Lines Down                                       | Move down                  |
 | `ctrl-h/l/k/j` | Navigate Left/Right/Up/Down Pane                      |                            |
-| `tab`          | Next Tab / Suggestion                                 |                            |
-| `shift-tab`    | Previous Tab / Suggestion                             |                            |
+| `tab`          | Next Tab / Suggestion / Quick Pick Next               |                            |
+| `shift-tab`    | Previous Tab / Suggestion / Quick Pick Previous       |                            |
 | `1`-`9`        | Open Tab at Index 1-9                                 |                            |
-| `r`            | Rename File (Explorer) / Start Debug                  | [R]ename / [R]un           |
+| `r`            | Rename File (Explorer) / Toggle Breakpoint            | [R]ename / b[R]eakpoint    |
+| `shift-r`      | Start Debug                                           | [R]un                      |
 | `c`            | Copy File (Explorer)                                  | [C]opy                     |
 | `p`            | Paste File (Explorer)                                 | [P]aste                    |
 | `x`            | Cut File (Explorer)                                   |                            |
@@ -272,12 +253,10 @@ Below is my custom [`keybindings`](Library/Application%20Support/Code/User/keybi
 | `a`            | New File (Explorer)                                   |                            |
 | `shift-a`      | New Folder (Explorer)                                 |                            |
 | `enter`        | Open File / Toggle Folder (Explorer)                  |                            |
-| `n`            | Next Word Highlight / Debug Step Over                 | [N]ext step                |
+| `n`            | Next Word Highlight / Debug Step Over                 | [N]ext highlight / step    |
 | `shift+n`      | Previous Word Highlight / Debug Continue              | [N]ext breakpoint          |
-| `t`            | Markdown Preview / Toggle Breakpoint                  | [T]oggle preview / [T]ag   |
 | `escape`       | Stop Debug / Close Markers Navigation                 |                            |
 | `ctrl-c`       | Stop Debug                                            |                            |
-| `shift-r`      | Select & Start Debug                                  | [R]un                      |
 
 ## 6. Chrome Extensions
 
