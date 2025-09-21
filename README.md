@@ -289,7 +289,7 @@ map o Vomnibar.activateBookmarks
 map O Vomnibar.activateBookmarksInNewTab
 map <tab> previousTab
 map <s-tab> nextTab
-map t createTab
+map s createTab
 map q removeTab
 map Q restoreTab
 map r reload
