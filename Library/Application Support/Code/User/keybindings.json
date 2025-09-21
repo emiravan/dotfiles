@@ -134,7 +134,7 @@
     "when": "vim.mode == 'Normal' && (editorTextFocus || activeWebviewPanelId == 'markdown.preview')"
   },
   {
-    "key": "shift-q", // [Q]uit & save other editors
+    "key": "shift-q", // [Q]uit all other editors
     "command": "workbench.action.closeOtherEditors",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
   },
@@ -241,51 +241,6 @@
     "key": "shift-tab",
     "command": "workbench.action.previousEditorInGroup",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "1",
-    "command": "workbench.action.openEditorAtIndex1",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "2",
-    "command": "workbench.action.openEditorAtIndex2",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "3",
-    "command": "workbench.action.openEditorAtIndex3",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "4",
-    "command": "workbench.action.openEditorAtIndex4",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "5",
-    "command": "workbench.action.openEditorAtIndex5",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "6",
-    "command": "workbench.action.openEditorAtIndex6",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "7",
-    "command": "workbench.action.openEditorAtIndex7",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "8",
-    "command": "workbench.action.openEditorAtIndex8",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "9",
-    "command": "workbench.action.openEditorAtIndex9",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
   },
 
   // ==========================
