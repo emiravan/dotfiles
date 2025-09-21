@@ -287,8 +287,8 @@ map b goBack
 map w goForward
 map o Vomnibar.activateBookmarks
 map O Vomnibar.activateBookmarksInNewTab
-map h previousTab
-map l nextTab
+map <tab> previousTab
+map <s-tab> nextTab
 map t createTab
 map q removeTab
 map Q restoreTab
