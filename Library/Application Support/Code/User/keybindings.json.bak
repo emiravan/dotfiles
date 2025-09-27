@@ -1,4 +1,64 @@
 [
+  // ========================
+  // ======= MARKDOWN =======
+  // ========================
+  {
+    "key": "cmd+i", // Avoid Copilot conflict
+    "command": "-markdown.extension.editing.toggleItalic",
+    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
+  },
+  {
+    "key": "s", // Toggle preview to [S]ide
+    "command": "markdown.showPreviewToSide",
+    "when": "!notebookEditorFocused && editorLangId == 'markdown' && vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "s", // Toggle preview to [S]ide
+    "command": "markdown.extension.closePreview",
+    "when": "activeWebviewPanelId == 'markdown.preview'"
+  },
+  {
+    "key": "shift-s", // Open mind map to [S]ide
+    "command": "markmap-vscode.open",
+    "when": "editorLangId == 'markdown' && vim.mode == 'Normal' && editorTextFocus"
+  },
+
+  // ========================
+  // =======  WINDOW  =======
+  // ========================
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.newWindow"
+  },
+
+  // ========================
+  // ======= VIM SEARCH =====
+  // ========================
+  {
+    "key": "n",
+    "command": "editor.action.wordHighlight.next",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !searchInputBoxFocus"
+  },
+  {
+    "key": "shift+n",
+    "command": "editor.action.wordHighlight.prev",
+    "when": "vim.mode == 'Normal' && editorTextFocus && !searchInputBoxFocus"
+  },
+
+  // =======================
+  // ====   FULLSCREEN  =====
+  // =======================
+  {
+    "key": "f", // [F]ullscreen
+    "command": "workbench.action.toggleMaximizeEditorGroup",
+    "when": "(editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups) && vim.mode == 'Normal' && (editorTextFocus || activeWebviewPanelId == 'markdown.preview')"
+  },
+  {
+    "key": "shift+f", // [F]ullscreen window
+    "command": "workbench.action.toggleFullScreen",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || activeWebviewPanelId == 'markdown.preview')"
+  },
+
   // =======================
   // ==== TOGGLE PANELS =====
   // =======================
@@ -7,7 +67,7 @@
     "command": "workbench.action.terminal.toggleTerminal"
   },
   {
-    "key": "ctrl+i", // [I]nline chat
+    "key": "ctrl+i",
     "command": "workbench.action.chat.toggle"
   },
   {
@@ -61,44 +121,17 @@
   // ======= LEADER BINDS ========
   // =============================
   {
-    "key": "space e", // File [E]xplorer
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.files.action.focusFilesExplorer"
-      ]
-    },
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && !sideBarFocus"
-  },
-  {
-    "key": "space e", // File [E]xplorer
-    "command": "runCommands",
-    "args": {
-      "commands": [
-        "workbench.action.toggleSidebarVisibility",
-        "workbench.action.focusActiveEditorGroup"
-      ]
-    },
-    "when": "sideBarFocus && !inputFocus"
-  },
-  {
-    "key": "space e", // File [E]xplorer
-    "when": "vim.mode == 'Normal' && editorTextFocus && foldersViewVisible",
-    "command": "workbench.action.toggleSidebarVisibility"
-  },
-  {
-    "key": "ctrl-n",
-    "command": "editor.action.addSelectionToNextFindMatch",
-    "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "space w", // [W]rite current file,
+    "key": "t", // Wri[T]e current file,
     "command": "workbench.action.files.save",
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "space q", // [Q]uit & save
+    "key": "shift+t", // Wri[T]e all files
+    "command": "workbench.action.files.saveAll",
+    "when": "vim.mode == 'Normal' && editorTextFocus"
+  },
+  {
+    "key": "q", // [Q]uit & save
     "command": "runCommands",
     "args": {
       "commands": [
@@ -106,22 +139,12 @@
         "workbench.action.closeActiveEditor"
       ]
     },
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal' && (editorTextFocus || activeWebviewPanelId == 'markdown.preview')"
   },
   {
-    "key": "space t", // Close o[T]her editors
+    "key": "shift-q", // [Q]uit all other editors
     "command": "workbench.action.closeOtherEditors",
     "when": "(vim.mode == 'Normal' || vim.mode == 'Visual') && (editorTextFocus || !inputFocus)"
-  },
-  {
-    "key": "space f", // [F]ullscreen
-    "command": "workbench.action.toggleMaximizeEditorGroup",
-    "when": "vim.mode == 'Normal' && (editorPartMaximizedEditorGroup || editorPartMultipleEditorGroups)"
-  },
-  {
-    "key": "space z", // [Z]en mode
-    "command": "workbench.action.toggleZenMode",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus)"
   },
   {
     "key": "space c a", // [C]ode [A]ction
@@ -159,24 +182,24 @@
     "when": "vim.mode == 'Normal' && editorTextFocus"
   },
   {
-    "key": "[ d", // Prev diagnostics
+    "key": "shift-m", // [M]arker previous
     "command": "editor.action.marker.prev",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId != 'markdown'"
   },
   {
-    "key": "] d", // Next diagnostics
+    "key": "m", // [M]arker next
     "command": "editor.action.marker.next",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId != 'markdown'"
   },
   {
-    "key": "space s", // [S]plit
-    "command": "workbench.action.splitEditorRight",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "key": "s", // [S]plit
+    "command": "workbench.action.splitEditor",
+    "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId != 'markdown'"
   },
   {
-    "key": "space d", // Split [D]own
+    "key": "shift-s", // [S]plit down
     "command": "workbench.action.splitEditorDown",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
+    "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId != 'markdown'"
   },
   {
     "key": "shift-k", // [K]nowledge
@@ -404,11 +427,45 @@
     "when": "codeActionMenuVisible"
   },
 
+  // ========================
+  // ======= DEBUGGING ========
+  // ========================
+  {
+    "key": "r", // b[R]eakpoint
+    "command": "editor.debug.action.toggleBreakpoint",
+    "when": "vim.mode == 'Normal' && editorTextFocus && editorLangId != 'markdown'"
+  },
+  {
+    "key": "shift-r", // [R]un
+    "command": "workbench.action.debug.start",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && debuggersAvailable && !filesExplorerFocus"
+  },
+  {
+    "key": "escape",
+    "command": "workbench.action.debug.stop",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode"
+  },
+  {
+    "key": "ctrl-c",
+    "command": "workbench.action.debug.stop",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode"
+  },
+  {
+    "key": "n", // [N]ext step
+    "command": "workbench.action.debug.stepOver",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped'"
+  },
+  {
+    "key": "shift+n", // [N]ext breakpoint
+    "command": "workbench.action.debug.continue",
+    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped'"
+  },
+
   // =========================
   // ======= TERMINAL ========
   // =========================
   {
-    "key": "ctrl+s", // [S]plit
+    "key": "ctrl+s", // [S]plit terminal
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus"
   },
@@ -423,55 +480,8 @@
     "when": "terminalFocus"
   },
   {
-    "key": "ctrl+q", // [Q]uit
+    "key": "ctrl+q", // [Q]uit terminal
     "command": "workbench.action.terminal.kill",
     "when": "terminalFocus"
-  },
-
-  // =========================
-  // ======= DEBUGGING =======
-  // =========================
-  {
-    "key": "space r", // [R]un
-    "command": "workbench.action.debug.start",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && debuggersAvailable"
-  },
-  {
-    "key": "space s", // [S]top
-    "command": "workbench.action.debug.stop",
-    "when": "vim.mode == 'Normal' && editorTextFocus && inDebugMode && !focusedSessionIsAttached"
-  },
-  {
-    "key": "space o", // Step[O]ver
-    "command": "workbench.action.debug.stepOver",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped'"
-  },
-  {
-    "key": "space b", // [B]reakpoint
-    "command": "editor.debug.action.toggleBreakpoint",
-    "when": "vim.mode == 'Normal' && editorTextFocus"
-  },
-  {
-    "key": "space h", // [H]over
-    "command": "editor.debug.action.showDebugHover",
-    "when": "vim.mode == 'Normal' && editorTextFocus && inDebugMode && debugState == 'stopped'"
-  },
-  {
-    "key": "space c", // [C]ontinue
-    "command": "workbench.action.debug.continue",
-    "when": "vim.mode == 'Normal' && (editorTextFocus || !inputFocus) && inDebugMode && debugState == 'stopped'"
-  },
-
-  // =========================
-  // =======  OTHERS   =======
-  // =========================
-  {
-    "key": "cmd+i", // Avoid Copilot conflict
-    "command": "-markdown.extension.editing.toggleItalic",
-    "when": "editorTextFocus && !editorReadonly && editorLangId =~ /^markdown$|^rmd$|^quarto$/"
-  },
-  {
-    "key": "cmd+n",
-    "command": "workbench.action.newWindow"
   }
 ]

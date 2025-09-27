@@ -211,52 +211,64 @@ defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 
 ## 5. VS Code Keybindings
 
-Below is my custom [`keybindings`](Library/Application%20Support/Code/User/keybindings.json) for VS Code.  
-> **Note:** Some default Vim keybindings are not used, and certain keys are reassigned for productivity. See below for updated keybinds.
+Below is my custom [`keybindings`](Library/Application%20Support/Code/User/keybindings.json) for VS Code.
 
-| Key(s)         | Action / Command                                      | Description                |
-|----------------|-------------------------------------------------------|----------------------------|
-| `ctrl+t`       | Toggle Terminal                                       | [T]erminal                 |
-| `ctrl+i`       | Toggle Chat                                           |                            |
-| `ctrl-s`       | Toggle Sidebar                                        | [S]idebar                  |
-| `ctrl+u`       | Scroll Up Half Page  Center Cursor                   |                            |
-| `ctrl+d`       | Scroll Down Half Page + Center Cursor                 |                            |
-| `f`            | Toggle Maximize Editor Group                          | [F]ullscreen (editor)      |
-| `shift+f`      | Toggle Fullscreen Window                             | [F]ullscreen (window)      |
-| `q`            | Save & Close Editor                                   | [Q]uit & save              |
-| `shift+q`      | Close Other Editors                                   | [Q]uit others              |
-| `t`            | Save Current File                                     | Wri[T]e file               |
-| `shift+t`      | Save All Files                                        | Wri[T]e all                |
-| `space c a`    | Code Action                                           | [C]ode [A]ction            |
-| `space c r`    | Rename Symbol                                         | [C]ode [R]ename            |
-| `space c s`    | Go to Symbol                                          | [C]ode [S]ymbol            |
-| `space space`  | Quick Open                                            |                            |
-| `space g d`    | Go to Definition                                      | [G]o to [D]efinition       |
-| `space g r`    | Go to References                                      | [G]o to [R]eferences       |
-| `space g i`    | Go to Implementation                                  | [G]o to [I]mplementation   |
-| `shift-m`      | Previous Marker                                       | [M]arker previous          |
-| `m`            | Next Marker                                           | [M]arker next              |
-| `s`            | Split Editor / Markdown Preview / Open to Side        | [S]plit / [S]ide           |
-| `shift-s`      | Split Editor Down / Mind Map / Open to Side           | [S]plit down / [S]ide      |
-| `shift-k`      | Show Hover / Move Lines Up                            | [K]nowledge / Move up      |
-| `shift-j`      | Move Lines Down                                       | Move down                  |
-| `ctrl-h/l/k/j` | Navigate Left/Right/Up/Down Pane                      |                            |
-| `tab`          | Next Tab / Suggestion / Quick Pick Next               |                            |
-| `shift-tab`    | Previous Tab / Suggestion / Quick Pick Previous       |                            |
-| `1`-`9`        | Open Tab at Index 1-9                                 |                            |
-| `r`            | Rename File (Explorer) / Toggle Breakpoint            | [R]ename / b[R]eakpoint    |
-| `shift-r`      | Start Debug                                           | [R]un                      |
-| `c`            | Copy File (Explorer)                                  | [C]opy                     |
-| `p`            | Paste File (Explorer)                                 | [P]aste                    |
-| `x`            | Cut File (Explorer)                                   |                            |
-| `d`            | Delete File (Explorer)                                | [D]elete                   |
-| `a`            | New File (Explorer)                                   |                            |
-| `shift-a`      | New Folder (Explorer)                                 |                            |
-| `enter`        | Open File / Toggle Folder (Explorer)                  |                            |
-| `n`            | Next Word Highlight / Debug Step Over                 | [N]ext highlight / step    |
-| `shift+n`      | Previous Word Highlight / Debug Continue              | [N]ext breakpoint          |
-| `escape`       | Stop Debug / Close Markers Navigation                 |                            |
-| `ctrl-c`       | Stop Debug                                            |                            |
+| Key(s)         | Action / Command                                      | Description                        |
+|----------------|-------------------------------------------------------|------------------------------------|
+| `ctrl+t`       | Toggle Terminal                                       | [T]erminal                         |
+| `ctrl+i`       | Toggle Inline Chat                                    | [I]nline chat                      |
+| `ctrl+s`       | Toggle Sidebar / Split Terminal (in terminal)         | [S]idebar / [S]plit terminal       |
+| `ctrl+u`       | Scroll Up Half Page + Center Cursor                   | Centered scroll up                 |
+| `ctrl+d`       | Scroll Down Half Page + Center Cursor                 | Centered scroll down               |
+| `space e`      | Toggle File Explorer                                  | [E]xplorer (Vim normal mode)       |
+| `ctrl+n`       | Add Selection to Next Find Match                      | Multi-cursor select next           |
+| `space w`      | Save Current File                                     | [W]rite file                       |
+| `space q`      | Save & Close Editor                                   | [Q]uit & save                      |
+| `space t`      | Close Other Editors                                   | Close o[T]her editors              |
+| `space f`      | Maximize Editor Group                                 | [F]ullscreen/maximize editor       |
+| `space z`      | Toggle Zen Mode                                       | [Z]en mode                         |
+| `space c a`    | Code Action                                           | [C]ode [A]ction                    |
+| `space c r`    | Rename Symbol                                         | [C]ode [R]ename                    |
+| `space c s`    | Go to Symbol                                          | [C]ode [S]ymbol                    |
+| `space space`  | Quick Open                                            |                                    |
+| `space g d`    | Go to Definition                                      | [G]o to [D]efinition               |
+| `space g r`    | Go to References                                      | [G]o to [R]eferences               |
+| `space g i`    | Go to Implementation                                  | [G]o to [I]mplementation           |
+| `[ d`          | Previous Diagnostic                                   | Prev diagnostics                   |
+| `] d`          | Next Diagnostic                                       | Next diagnostics                   |
+| `space s`      | Split Editor Right / Stop Debug                       | [S]plit right / [S]top debug       |
+| `space d`      | Split Editor Down                                     | Split [D]own                       |
+| `shift-k`      | Show Hover / Move Lines Up                            | [K]nowledge / Move up (visual line)|
+| `shift-j`      | Move Lines Down                                       | Move down (visual line)            |
+| `ctrl-h/l/k/j` | Navigate Left/Right/Up/Down Pane                      | Pane navigation                    |
+| `tab`          | Next Tab / Suggestion / Quick Pick Next               | Tab navigation / suggestions       |
+| `shift-tab`    | Previous Tab / Suggestion / Quick Pick Previous       | Tab navigation / suggestions       |
+| `cmd+1`-`cmd+9`| Open Tab at Index 1-9                                 |                                    |
+| `r`            | Rename File (Explorer)                                | [R]ename                           |
+| `c`            | Copy File (Explorer)                                  | [C]opy                             |
+| `p`            | Paste File (Explorer)                                 | [P]aste                            |
+| `x`            | Cut File (Explorer)                                   |                                    |
+| `d`            | Delete File (Explorer)                                | [D]elete                           |
+| `a`            | New File (Explorer)                                   |                                    |
+| `shift-a`      | New Folder (Explorer)                                 |                                    |
+| `s`            | Open to Side (Explorer)                               | [S]ide                             |
+| `shift-s`      | Split Down & Open to Side (Explorer)                  | Split down & open                  |
+| `enter`        | Open File / Toggle Folder (Explorer)                  |                                    |
+| `escape`       | Close Markers Navigation                              |                                    |
+| `space r`      | Start Debug                                           | Start debugging                    |
+| `space o`      | Debug Step Over                                       | Step[O]ver                         |
+| `space b`      | Toggle Breakpoint                                     | [B]reakpoint                       |
+| `space h`      | Show Debug Hover                                      | [H]over                            |
+| `space c`      | Debug Continue                                        | [C]ontinue                         |
+| `ctrl+q`       | Kill Terminal (in terminal)                           | [Q]uit terminal                    |
+| `cmd+i`        | (Unbound: Markdown Italic, avoids Copilot conflict)   |                                    |
+| `cmd+n`        | New Window                                            |                                    |
+
+> Many keybindings are context-aware (e.g., Vim mode, Explorer focus, terminal focus).
+
+
+> Many keybindings are context-aware (e.g., Vim mode, Explorer focus, terminal focus).
+
 
 ## 6. Chrome Extensions
 
