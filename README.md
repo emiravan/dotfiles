@@ -136,8 +136,6 @@ cd .. && rm -rf dotfiles
 
 [Rcmd App Switcher](https://apps.apple.com/us/app/rcmd-app-switcher/id1596283165?mt=12) provides press right Command (⌘) + custom key to switch applications
 
-Below is my custom keys
-
 | Key(s) | Application | Description |
 | :--- | :--- | :--- |
 | `⌘+a` | [Anki](https://apps.ankiweb.net/) | [A]nki |
@@ -146,12 +144,12 @@ Below is my custom keys
 | `⌘+b` | [Chrome (Browser)](https://www.google.com/chrome/) | [B]rowser |
 | `⌘+d` | [Excalidraw](https://excalidrawz.chocoford.com/) | [D]rawing |
 | `⌘+f` | Finder | [F]inder |
-| `⌘+e` | Mail | [M]ail |
+| `⌘+e` | Mail | [E]mail |
 | `⌘+s` | [Music](https://music.apple.com/) | [S]ong |
 | `⌘+n` | Notes | [N]otes |
 | `⌘+m` | [Texty](https://apps.apple.com/us/app/texty-for-google-messages/id1538996043?mt=12) | [M]essages |
 | `⌘+t` | [Todoist](https://todoist.com/) | [T]asks |
-| `⌘+v` | [VSCode](https://code.visualstudio.com/) | [V]isual Studio Code |
+| `⌘+v` | [VSCode](https://code.visualstudio.com/) | [V]S Code |
 | `⌘+w` | [WhatsApp](https://www.whatsapp.com/download) | [W]hatsapp |
 
 ---
@@ -280,9 +278,8 @@ Below is my custom [`keybindings`](https://www.google.com/search?q=Library/Appli
 * **[GitZip for GitHub](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn)** — Download files from GitHub repositories as zip files.
 * **[uBlock Origin Lite](https://chrome.google.com/webstore/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh)** — Ad block.
 * **[SponsorBlock for YouTube](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)** — Skip sponsorships.
-* **[Google Keep Chrome Extension](https://chromewebstore.google.com/detail/google-keep-chrome-extens/lpcaedmchfhocbbapmcbpinfpgnhiddi?hl=en-US&utm_source=ext_sidebar)** — Save notes to Google Keep.
-* **[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)** — Vim-style keyboard navigation.
 * **[Google Translate](https://chromewebstore.google.com/detail/google-translate/aapbdbdomjkkjkaonfhkkikfgjllcleb)** — Translate text and web pages.
+* **[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)** — Vim-style keyboard navigation.
 
 <details>
 <summary><b>⌨️ Custom Vimium key mappings</b></summary>
