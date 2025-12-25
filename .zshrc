@@ -13,7 +13,7 @@ zstyle ':omz:plugins:eza' 'icons' yes
 zstyle ':omz:plugins:eza' 'show-group' no
 zstyle ':omz:update' mode auto
 
-plugins=(eza zoxide fzf)
+plugins=(eza zoxide fzf macos)
 
 source $ZSH/oh-my-zsh.sh
 
