@@ -209,16 +209,6 @@
     "key": "ctrl-j",
     "command": "workbench.action.navigateDown"
   },
-  {
-    "key": "ctrl+j",
-    "command": "googleTasks.focus",
-    "when": "filesExplorerFocus && foldersViewVisible && !inputFocus"
-  },
-  {
-    "key": "ctrl+k",
-    "command": "workbench.files.action.focusFilesExplorer",
-    "when": "!inputFocus"
-  },
 
   // ============
   // === TABS ===
