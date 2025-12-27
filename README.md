@@ -32,6 +32,17 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 * **[yazi](https://github.com/sxyazi/yazi)** — Terminal file manager.
 * **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** — YouTube video downloader.
 * **[zoxide](https://github.com/ajeetdsouza/zoxide)** — Smarter `cd` command.
+* **[syncthing](https://syncthing.net/)** — File synchronization between devices.
+<details>
+<summary><b>To Start Syncthing:</b></summary>
+
+> 
+> ```bash
+> brew services start syncthing
+> ```
+> Then access it at [`localhost:8384`](http://localhost:8384)
+
+</details>
 
 #### Project Dependencies
 
@@ -45,11 +56,12 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 
 > **To Install All:**
 > ```bash
-> brew install cmake eza fzf glew glow sdl2 sdl2_image yazi yt-dlp zoxide
+> brew install cmake eza fzf glew glow sdl2 sdl2_image yazi yt-dlp zoxide syncthing
 > 
 > ```
 > 
 > 
+
 
 ---
 
@@ -70,18 +82,15 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 * **[visual-studio-code](https://code.visualstudio.com/)** — Code editor.
 * **[whatsapp](https://www.whatsapp.com/download)** — Messaging.
 * **[anki](https://apps.ankiweb.net/)** — Flashcard app.
-* **[meetingBar](https://meetingbar.app/)** — Menu bar app for calendar events.
 * **[fliqlo](https://fliqlo.com/)** — Flip clock screensaver.
 * **[spotmenu](https://formulae.brew.sh/cask/spotmenu)** — Music player in the menu bar.
-* **[excalidrawz](https://excalidrawz.chocoford.com/)** — Native excalidraw experience.
-* **[chatgpt desktop](https://chatgpt.com/features/desktop/)** — ChatGPT desktop application.
-* **[proNotes](https://www.pronotes.app/)** — Apple notes plugin.
-* **[Todoist](https://todoist.com/)** — Task management.
-
+* **[todoist](https://todoist.com/)** — Task management.
+* **[obsidian](https://obsidian.md/)** — Knowledge base and note-taking application.
+* **[notion-calendar](https://www.notion.so/product/calendar)** — Calendar application integrated with Notion.
 
 > **To Install All:**
 > ```bash
-> brew install --cask blip cloudflare-warp discord font-lilex-nerd-font google-chrome iina keka logi-options+ microsoft-excel microsoft-powerpoint microsoft-word middleclick visual-studio-code whatsapp anki meetingbar fliqlo spotmenu excalidrawz chatgpt pronotes todoist-app
+> brew install --cask blip cloudflare-warp discord font-lilex-nerd-font google-chrome iina keka logi-options+ microsoft-excel microsoft-powerpoint microsoft-word middleclick visual-studio-code whatsapp anki fliqlo spotmenu todoist-app obsidian notion-calendar
 > 
 > ```
 > 
@@ -92,7 +101,6 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 ### App Store Applications
 
 * **[Texty](https://apps.apple.com/us/app/texty-for-google-messages/id1538996043?mt=12)** — Google Messages client.
-* **[Flow](https://www.flow.app/)** — Pomodoro time tracker in menu bar.
 * **[Rcmd App Switcher](https://apps.apple.com/us/app/rcmd-app-switcher/id1596283165?mt=12)** — App switcher via right command key.
 
 ---
@@ -139,14 +147,12 @@ cd .. && rm -rf dotfiles
 | Key(s) | Application | Description |
 | :--- | :--- | :--- |
 | `⌘+a` | [Anki](https://apps.ankiweb.net/) | [A]nki |
-| `⌘+c` | Calendar | [C]alendar |
-| `⌘+g` | [ChatGPT](https://chatgpt.com/features/desktop/) | [G]PT |
-| `⌘+b` | [Chrome (Browser)](https://www.google.com/chrome/) | [B]rowser |
-| `⌘+d` | [Excalidraw](https://excalidrawz.chocoford.com/) | [D]rawing |
+| `⌘+c` | [Notion Calendar](https://www.notion.so/product/calendar) | [C]alendar |
+| `⌘+b` | [Google Chrome](https://www.google.com/chrome/) | [B]rowser |
 | `⌘+f` | Finder | [F]inder |
 | `⌘+e` | Mail | [E]mail |
 | `⌘+s` | [Music](https://music.apple.com/) | [S]ong |
-| `⌘+n` | Notes | [N]otes |
+| `⌘+n` | [Obsidian](https://obsidian.md/) | [N]otes |
 | `⌘+m` | [Texty](https://apps.apple.com/us/app/texty-for-google-messages/id1538996043?mt=12) | [M]essages |
 | `⌘+t` | [Todoist](https://todoist.com/) | [T]asks |
 | `⌘+v` | [VSCode](https://code.visualstudio.com/) | [V]S Code |
@@ -168,11 +174,6 @@ cd .. && rm -rf dotfiles
 > 
 > 
 
-### AI
-
-* **[GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=github.copilot)** — AI-powered code completion.
-* **[Codex](https://marketplace.visualstudio.com/items?itemName=openai.chatgpt)** — ChatGPT integration for VS Code.
-
 ### UI
 
 * **[Sonomin](https://marketplace.visualstudio.com/items?itemName=NewKanvas.sonomin)** — Dark theme.
@@ -181,11 +182,10 @@ cd .. && rm -rf dotfiles
 * **[Todo Tree](https://marketplace.visualstudio.com/items?itemName=gruntfuggly.todo-tree)** — Highlights TODOs, FIXMEs, etc.
 * **[Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)** — Highlights errors and warnings inline.
 
-### Note-Taking & Productivity
+### Productivity
 
-* **[Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)** — Markdown editing enhancements.
 * **[Markdown Preview Github Styles](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-preview-github-styles)** — GitHub-style markdown preview.
-* **[Code with Todoist](https://marketplace.visualstudio.com/items?itemName=spoorthi.code-with-todoist)** — Integrates Todoist with VS Code.
+* **[todoist](https://marketplace.visualstudio.com/items?itemName=waymondo.todoist)** — Todoist integration.
 * **[Anki for VSCode](https://marketplace.visualstudio.com/items?itemName=jasew.anki)** — Anki flashcard integration.
 * **[vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)** — PDF file viewer.
 * **[LeetCode](https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode)** — LeetCode problem solving within VS Code.
@@ -272,7 +272,56 @@ Below is my custom [`keybindings`](https://www.google.com/search?q=Library/Appli
 
 ---
 
-## 7. 🌐 Chrome Extensions
+## 7. 🍎 macOS Settings
+
+### Modifier Keys
+
+This mapping enhances Vim workflow by placing the Control key in an ergonomic position.
+
+1. Open **System Settings** → **Keyboard** → **Keyboard Shortcuts** → **Modifier Keys**
+2. Find "Caps Lock (⇪) key"
+3. Change it to "Control (⌃)"
+
+
+### Window Navigation
+
+Set the "Move focus to next window" keyboard shortcut to **Cmd (⌘) + §** for easier access:
+
+1. Open **System Settings** → **Keyboard** → **Keyboard Shortcuts** → **Keyboard**
+3. Find "Move focus to next window"
+4. Click the field and press **⌘ + §**
+
+### Trackpad Settings
+
+Smart Zoom causes delays during right-click operations. To disable:
+
+1. Open **System Settings** → **Trackpad** → **Scroll & Zoom**
+2. Uncheck **Smart Zoom**
+
+To enable Tap to Click:
+
+1. Open **System Settings** → **Trackpad** → **Point & Click**
+2. Check **Tap to Click**
+
+
+### Remove Dock Animation
+
+```bash
+defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
+```
+
+To revert to default settings, run:
+```bash
+defaults delete com.apple.dock autohide-time-modifier; killall Dock
+```
+
+### Reduce Motion
+
+Enable **Accessibility** → **Display** → **Reduce motion** to minimize animations system-wide and reduce eye strain.
+
+---
+
+## 8. 🌐 Chrome Extensions
 
 * **[Material Icons for GitHub](https://chromewebstore.google.com/detail/material-icons-for-github/bggfcpfjbdkhfhfmkjpbhnkhnpjjeomc)** — Adds Material icons to GitHub.
 * **[GitZip for GitHub](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn)** — Download files from GitHub repositories as zip files.
@@ -314,28 +363,28 @@ map y copyCurrentUrl
 
 ---
 
-## 8. 🔖 Browser Bookmarks
+## 9. 🔖 Browser Bookmarks
 
 * [Gemini](https://gemini.google.com)
 * [YouTube](https://youtube.com)
 * [Photos](https://photos.google.com)
-* [NotebookLM](https://notebooklm.google.com)
+* [Notebook](https://notebooklm.google.com)
 * [Classroom](https://classroom.google.com)
 * [Drive](https://drive.google.com)
 * [Github](https://github.com/trending?since=monthly)
-* [HackerNews](https://hackerweb.app/)
+* [News](https://hackerweb.app/)
 * [X](https://x.com)
 * [Bandcamp](https://bandcamp.com/discover/ambient/digital)
 * [Letterboxd](https://letterboxd.com)
 * [Netflix](https://netflix.com)
 * [HBO](https://www.hbomax.com)
 * [Kick](https://kick.com)
-* [Lichess](https://lichess.org/)
-* [Geoguessr](https://www.geoguessr.com)
+* [Chess](https://lichess.org/)
+* [Wordle](https://www.nytimes.com/games/wordle/index.html)
 
 ---
 
-## 9. 🎨 Excalidraw Library
+## 10. 🎨 Excalidraw Library
 
 My Excalidraw library includes custom shapes and diagrams. You can add it to Excalidraw using the [`Extra/library.excalidrawlib`](Extra/library.excalidrawlib) file.
 
@@ -343,7 +392,7 @@ My Excalidraw library includes custom shapes and diagrams. You can add it to Exc
 
 ---
 
-## 10. 🍏 Apple Shortcuts
+## 11. 🍏 Apple Shortcuts
 
 * **[OCR](https://www.icloud.com/shortcuts/5e3090a8d4b0457da506f48e745a2028)** — Copies text from the screen.
 
