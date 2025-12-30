@@ -1,0 +1,122 @@
+{
+  // THEME
+  "window.autoDetectColorScheme": true,
+  "workbench.preferredLightColorTheme": "Min Light",
+  "workbench.preferredDarkColorTheme": "Sonomin",
+  "material-icon-theme.hidesExplorerArrows": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "material-icon-theme.folders.color": "#4A90E2",
+
+  // FONT
+  "editor.fontFamily": "Lilex Nerd Font",
+  "editor.fontLigatures": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "variable.other.property.c",
+        "settings": {
+          "foreground": "#D18A52"
+        }
+      },
+      {
+        "scope": ["keyword", "entity.name.function", "variable.parameter"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+
+  // UI
+  "window.title": " ",
+  "workbench.startupEditor": "none",
+  "workbench.activityBar.location": "bottom",
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.horizontal": "hidden",
+  "window.density.editorTabHeight": "compact",
+  "workbench.statusBar.visible": false,
+  "workbench.layoutControl.enabled": false,
+  "window.commandCenter": false,
+  "editor.bracketPairColorization.enabled": false,
+  "breadcrumbs.symbolPath": "off",
+  "breadcrumbs.icons": false,
+  "editor.cursorBlinking": "solid",
+  "editor.lineNumbers": "relative",
+  "terminal.integrated.suggest.enabled": false,
+
+  // FORMATTING
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8"
+  },
+  "autopep8.args": ["--max-line-length", "120", "--ignore=E701"],
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 4, ColumnLimit: 0}",
+
+  // EXTENSIONS
+  "github.copilot.enable": {
+    "*": false
+  },
+  "vim.useSystemClipboard": true,
+  "vim.highlightedyank.enable": true,
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1
+  },
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<Enter>"],
+      "commands": ["editor.action.insertLineAfter"]
+    },
+    {
+      "before": ["<BS>"],
+      "commands": ["editor.action.deleteLines"]
+    },
+    {
+      "before": ["z"],
+      "after": ["z", "z"]
+    },
+    {
+      "before": ["g"],
+      "after": ["g", "g"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["j", "k"],
+      "after": ["<Esc>"]
+    }
+  ],
+  "makefile.configureOnOpen": true,
+  "makefile.safeCommands": ["sdl2-config"],
+  "cSpell.language": "en,tr",
+  "cSpell.languageSettings": [
+    {
+      "languageId": "python",
+      "includeRegExpList": ["/#.*/", "/('''|\"\"\")[^\\1]+?\\1/g", "strings"]
+    },
+    {
+      "languageId": "javascript,typescript",
+      "includeRegExpList": ["CStyleComment", "strings"]
+    },
+    {
+      "languageId": "cpp,c",
+      "allowCompoundWords": false,
+      "includeRegExpList": ["CStyleComment", "string"],
+      "ignoreRegExpList": ["/#include.*/"]
+    }
+  ],
+  "42header.email": "avanemir@icloud.com",
+  "42header.username": "emiravan",
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "anki.defaultDeck": "programming"
+}
