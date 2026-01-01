@@ -43,7 +43,6 @@
   "breadcrumbs.icons": false,
   "editor.cursorBlinking": "solid",
   "editor.lineNumbers": "relative",
-  "terminal.integrated.suggest.enabled": false,
 
   // FORMATTING
   "editor.formatOnSave": true,
@@ -117,6 +116,5 @@
   ],
   "42header.email": "avanemir@icloud.com",
   "42header.username": "emiravan",
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "anki.defaultDeck": "programming"
+  "github.copilot.nextEditSuggestions.enabled": true
 }

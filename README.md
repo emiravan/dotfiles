@@ -153,11 +153,9 @@ cd .. && rm -rf dotfiles
 | `⌘+s` | [Music](https://music.apple.com/) | [S]ong |
 | `⌘+n` | [Obsidian](https://obsidian.md/) | [N]otes |
 | `⌘+m` | [Texty](https://apps.apple.com/us/app/texty-for-google-messages/id1538996043?mt=12) | [M]essages |
-| `⌘+t` | [Todoist](https://todoist.com/) | [T]asks |
 | `⌘+v` | [VSCode](https://code.visualstudio.com/) | [V]S Code |
 | `⌘+w` | [WhatsApp](https://www.whatsapp.com/download) | [W]hatsapp |
 | `⌘+g` | [ChatGPT](https://openai.com/chatgpt/) | [G]PT |
-| `⌘+q` | [Zoho Notebook](https://apps.apple.com/us/app/notebook-notes-to-do/id1173152781?mt=12) | [Q]uick note |
 
 ---
 
@@ -328,6 +326,9 @@ Enable **Accessibility** → **Display** → **Reduce motion** to minimize anima
 * **[Mouse Tooltip Translator](https://chromewebstore.google.com/detail/mouse-tooltip-translator/hmigninkgibhdckiaphhmbgcghochdjc?hl=en-US&utm_source=ext_sidebar)** — Translate text on hover.
 * **[Todoist for Chrome](https://chromewebstore.google.com/detail/todoist-for-chrome-planne/jldhpllghnbhlbpcmnajkpdmadaolakh?hl=en-US&utm_source=ext_sidebar)** — Task management integration.
 * **[Notebook Web Clipper](https://chromewebstore.google.com/detail/notebook-web-clipper-%E2%80%93-st/cneaciknhhaahhdediboeafhdlbdoodg?hl=en-US&utm_source=ext_sidebar)** — Web clipper for [Zoho Notebook](https://www.zoho.com/notebook/).
+* **[Dark Reader](https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en-US&utm_source=ext_sidebar)** — Dark mode for all websites.
+* **[I Don't Care About Cookies](https://chromewebstore.google.com/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja?hl=en-US&utm_source=ext_sidebar)** — Remove cookie consent popups.
+* **[Video DownloadHelper](https://chromewebstore.google.com/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk?hl=en-US&utm_source=ext_sidebar)** — Download videos from websites.
 * **[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)** — Vim-style keyboard navigation.
 
 <details>
