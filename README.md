@@ -83,13 +83,12 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 * **[whatsapp](https://www.whatsapp.com/download)** — Messaging.
 * **[fliqlo](https://fliqlo.com/)** — Flip clock screensaver.
 * **[spotmenu](https://formulae.brew.sh/cask/spotmenu)** — Music player in the menu bar.
-* **[todoist](https://todoist.com/)** — Task management.
 * **[obsidian](https://obsidian.md/)** — Knowledge base and note-taking application.
 * **[chatgpt](https://openai.com/chatgpt/)** — AI assistant.
 
 > **To Install All:**
 > ```bash
-> brew install --cask blip cloudflare-warp discord font-lilex-nerd-font google-chrome iina keka logi-options+ microsoft-excel microsoft-powerpoint microsoft-word middleclick visual-studio-code whatsapp fliqlo spotmenu todoist-app obsidian chatgpt
+> brew install --cask blip cloudflare-warp discord font-lilex-nerd-font google-chrome iina keka logi-options+ microsoft-excel microsoft-powerpoint microsoft-word middleclick visual-studio-code whatsapp fliqlo spotmenu obsidian chatgpt
 > 
 > ```
 > 
@@ -183,7 +182,6 @@ cd .. && rm -rf dotfiles
 
 ### Productivity
 
-* **[vscode-pdf](https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf)** — PDF file viewer.
 * **[LeetCode](https://marketplace.visualstudio.com/items?itemName=LeetCode.vscode-leetcode)** — LeetCode problem solving within VS Code.
 * **[Todo Tree](https://marketplace.visualstudio.com/items?itemName=gruntfuggly.todo-tree)** — Displays TODO comments in a tree structure.
 
@@ -324,8 +322,6 @@ Enable **Accessibility** → **Display** → **Reduce motion** to minimize anima
 * **[uBlock Origin Lite](https://chrome.google.com/webstore/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh)** — Ad block.
 * **[SponsorBlock for YouTube](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)** — Skip sponsorships.
 * **[Mouse Tooltip Translator](https://chromewebstore.google.com/detail/mouse-tooltip-translator/hmigninkgibhdckiaphhmbgcghochdjc?hl=en-US&utm_source=ext_sidebar)** — Translate text on hover.
-* **[Todoist for Chrome](https://chromewebstore.google.com/detail/todoist-for-chrome-planne/jldhpllghnbhlbpcmnajkpdmadaolakh?hl=en-US&utm_source=ext_sidebar)** — Task management integration.
-* **[Notebook Web Clipper](https://chromewebstore.google.com/detail/notebook-web-clipper-%E2%80%93-st/cneaciknhhaahhdediboeafhdlbdoodg?hl=en-US&utm_source=ext_sidebar)** — Web clipper for [Zoho Notebook](https://www.zoho.com/notebook/).
 * **[Dark Reader](https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en-US&utm_source=ext_sidebar)** — Dark mode for all websites.
 * **[I Don't Care About Cookies](https://chromewebstore.google.com/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja?hl=en-US&utm_source=ext_sidebar)** — Remove cookie consent popups.
 * **[Video DownloadHelper](https://chromewebstore.google.com/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk?hl=en-US&utm_source=ext_sidebar)** — Download videos from websites.
