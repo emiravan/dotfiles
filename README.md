@@ -1,7 +1,7 @@
 # Dotfiles
 
-![VS Code Dark](Extra/Images/vscode-dark.png)
-![VS Code Light](Extra/Images/vscode-light.png)
+![VS Code Dark](Images/dark.png)
+![VS Code Light](Images/light.png)
 
 ## 1. 🛠 Prerequisites
 
@@ -30,7 +30,6 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 * **[eza](https://github.com/eza-community/eza)** — Modern replacement for `ls`.
 * **[fzf](https://github.com/junegunn/fzf)** — Command-line fuzzy finder.
 * **[yazi](https://github.com/sxyazi/yazi)** — Terminal file manager.
-* **[yt-dlp](https://github.com/yt-dlp/yt-dlp)** — YouTube video downloader.
 * **[zoxide](https://github.com/ajeetdsouza/zoxide)** — Smarter `cd` command.
 * **[syncthing](https://syncthing.net/)** — File synchronization between devices.
 <details>
@@ -56,7 +55,7 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 
 > **To Install All:**
 > ```bash
-> brew install cmake eza fzf glew glow sdl2 sdl2_image yazi yt-dlp zoxide syncthing
+> brew install cmake eza fzf glew glow sdl2 sdl2_image yazi zoxide syncthing
 > 
 > ```
 > 
@@ -82,13 +81,12 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 * **[visual-studio-code](https://code.visualstudio.com/)** — Code editor.
 * **[whatsapp](https://www.whatsapp.com/download)** — Messaging.
 * **[fliqlo](https://fliqlo.com/)** — Flip clock screensaver.
-* **[spotmenu](https://formulae.brew.sh/cask/spotmenu)** — Music player in the menu bar.
 * **[obsidian](https://obsidian.md/)** — Knowledge base and note-taking application.
 * **[chatgpt](https://openai.com/chatgpt/)** — AI assistant.
 
 > **To Install All:**
 > ```bash
-> brew install --cask blip cloudflare-warp discord font-lilex-nerd-font google-chrome iina keka logi-options+ microsoft-excel microsoft-powerpoint microsoft-word middleclick visual-studio-code whatsapp fliqlo spotmenu obsidian chatgpt
+> brew install --cask blip cloudflare-warp discord font-lilex-nerd-font google-chrome iina keka logi-options+ microsoft-excel microsoft-powerpoint microsoft-word middleclick visual-studio-code whatsapp fliqlo obsidian chatgpt
 > 
 > ```
 > 
@@ -99,8 +97,6 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 ### App Store Applications
 
 * **[Texty](https://apps.apple.com/us/app/texty-for-google-messages/id1538996043?mt=12)** — Google Messages client.
-* **[Rcmd App Switcher](https://apps.apple.com/us/app/rcmd-app-switcher/id1596283165?mt=12)** — App switcher via right command key.
-* **[Zoho Notebook](https://apps.apple.com/us/app/notebook-notes-to-do/id1173152781?mt=12)** — For quick notes in menubar.
 
 ---
 
@@ -109,8 +105,8 @@ sh -c "$(curl -fsSL [https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install
 ### Clone Repository
 
 ```bash
-git clone [https://github.com/emiravan/dot-files.git](https://github.com/emiravan/dot-files.git)
-cd dot-files
+git clone https://github.com/emiravan/dotfiles.git
+cd dotfiles
 
 ```
 
@@ -139,26 +135,7 @@ cd .. && rm -rf dotfiles
 
 ---
 
-## 4. ️⌘ Rcmd Keys
-
-[Rcmd App Switcher](https://apps.apple.com/us/app/rcmd-app-switcher/id1596283165?mt=12) provides press right Command (⌘) + custom key to switch applications
-
-| Key(s) | Application | Description |
-| :--- | :--- | :--- |
-| `⌘+c` | Calendar | [C]alendar |
-| `⌘+b` | [Google Chrome](https://www.google.com/chrome/) | [B]rowser |
-| `⌘+f` | Finder | [F]inder |
-| `⌘+e` | Mail | [E]mail |
-| `⌘+s` | [Music](https://music.apple.com/) | [S]ong |
-| `⌘+n` | [Obsidian](https://obsidian.md/) | [N]otes |
-| `⌘+m` | [Texty](https://apps.apple.com/us/app/texty-for-google-messages/id1538996043?mt=12) | [M]essages |
-| `⌘+v` | [VSCode](https://code.visualstudio.com/) | [V]S Code |
-| `⌘+w` | [WhatsApp](https://www.whatsapp.com/download) | [W]hatsapp |
-| `⌘+g` | [ChatGPT](https://openai.com/chatgpt/) | [G]PT |
-
----
-
-## 5. 💻 VS Code Extensions
+## 4. 💻 VS Code Extensions
 
 ### VIM !
 
@@ -209,7 +186,7 @@ cd .. && rm -rf dotfiles
 
 ---
 
-## 6. ⌨️ VS Code Keybindings
+## 5. ⌨️ VS Code Keybindings
 
 Below is my custom [`keybindings`](https://www.google.com/search?q=Library/Application%2520Support/Code/User/keybindings.json) for VS Code.
 
@@ -266,37 +243,7 @@ Below is my custom [`keybindings`](https://www.google.com/search?q=Library/Appli
 
 ---
 
-## 7. 🍎 macOS Settings
-
-### Modifier Keys
-
-This mapping enhances Vim workflow by placing the Control key in an ergonomic position.
-
-1. Open **System Settings** → **Keyboard** → **Keyboard Shortcuts** → **Modifier Keys**
-2. Find "Caps Lock (⇪) key"
-3. Change it to "Control (⌃)"
-
-
-### Window Navigation
-
-Set the "Move focus to next window" keyboard shortcut to **Cmd (⌘) + §** for easier access:
-
-1. Open **System Settings** → **Keyboard** → **Keyboard Shortcuts** → **Keyboard**
-3. Find "Move focus to next window"
-4. Click the field and press **⌘ + §**
-
-### Trackpad Settings
-
-Smart Zoom causes delays during right-click operations. To disable:
-
-1. Open **System Settings** → **Trackpad** → **Scroll & Zoom**
-2. Uncheck **Smart Zoom**
-
-To enable Tap to Click:
-
-1. Open **System Settings** → **Trackpad** → **Point & Click**
-2. Check **Tap to Click**
-
+## 6. 🍎 macOS Settings
 
 ### Remove Dock Animation
 
@@ -304,27 +251,22 @@ To enable Tap to Click:
 defaults write com.apple.dock autohide-time-modifier -int 0; killall Dock
 ```
 
-To revert to default settings, run:
-```bash
-defaults delete com.apple.dock autohide-time-modifier; killall Dock
-```
 
-### Reduce Motion
+### Shortcuts
 
-Enable **Accessibility** → **Display** → **Reduce motion** to minimize animations system-wide and reduce eye strain.
+* **[OCR](https://www.icloud.com/shortcuts/5e3090a8d4b0457da506f48e745a2028)** — Copies text from the screen.
+
+> I recommend assigning the shortcut to `Cmd + Shift + 2` for quick access.
 
 ---
 
-## 8. 🌐 Chrome Extensions
+## 7. 🌐 Chrome Extensions
 
-* **[Material Icons for GitHub](https://chromewebstore.google.com/detail/material-icons-for-github/bggfcpfjbdkhfhfmkjpbhnkhnpjjeomc)** — Adds Material icons to GitHub.
-* **[GitZip for GitHub](https://chrome.google.com/webstore/detail/gitzip-for-github/ffabmkklhbepgcgfonabamgnfafbdlkn)** — Download files from GitHub repositories as zip files.
 * **[uBlock Origin Lite](https://chrome.google.com/webstore/detail/ublock-origin-lite/ddkjiahejlhfcafbddmgiahcphecmpfh)** — Ad block.
 * **[SponsorBlock for YouTube](https://chrome.google.com/webstore/detail/sponsorblock-for-youtube/mnjggcdmjocbbbhaepdhchncahnbgone)** — Skip sponsorships.
-* **[Mouse Tooltip Translator](https://chromewebstore.google.com/detail/mouse-tooltip-translator/hmigninkgibhdckiaphhmbgcghochdjc?hl=en-US&utm_source=ext_sidebar)** — Translate text on hover.
 * **[Dark Reader](https://chromewebstore.google.com/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh?hl=en-US&utm_source=ext_sidebar)** — Dark mode for all websites.
 * **[I Don't Care About Cookies](https://chromewebstore.google.com/detail/i-dont-care-about-cookies/fihnjjcciajhdojfnbdddfaoknhalnja?hl=en-US&utm_source=ext_sidebar)** — Remove cookie consent popups.
-* **[Video DownloadHelper](https://chromewebstore.google.com/detail/video-downloadhelper/lmjnegcaeklhafolokijcfjliaokphfk?hl=en-US&utm_source=ext_sidebar)** — Download videos from websites.
+* **[New Tab Notes](https://chromewebstore.google.com/detail/new-tab-notes/ipkihanjobiajblamocijadicanfagpj)** — Turn your new tab into notepad .
 * **[Vimium](https://chrome.google.com/webstore/detail/vimium/dbepggeogbaibhgnhhndojpepiihcmeb)** — Vim-style keyboard navigation.
 
 <details>
@@ -332,6 +274,8 @@ Enable **Accessibility** → **Display** → **Reduce motion** to minimize anima
 
 ```
 unmapAll
+map <c-d> scrollPageDown
+map <c-u> scrollPageUp
 map j scrollPageDown
 map k scrollPageUp
 map g scrollToTop
@@ -357,39 +301,3 @@ map y copyCurrentUrl
 </details>
 
 ---
-
-## 9. 🔖 Browser Bookmarks
-
-* [Gemini](https://gemini.google.com)
-* [YouTube](https://youtube.com)
-* [Photo](https://photos.google.com)
-* [Notebook](https://notebooklm.google.com)
-* [Classroom](https://classroom.google.com)
-* [Drive](https://drive.google.com)
-* [Github](https://github.com/trending?since=monthly)
-* [News](https://hackerweb.app/)
-* [X](https://x.com)
-* [Bandcamp](https://bandcamp.com/discover/ambient/digital)
-* [Letterboxd](https://letterboxd.com)
-* [Netflix](https://netflix.com)
-* [HBO](https://www.hbomax.com)
-* [Kick](https://kick.com)
-* [Lichess](https://lichess.org/)
-* [GeoGuessr](https://www.geoguessr.com)
-* [Wordle](https://www.nytimes.com/games/wordle/index.html)
-
----
-
-## 10. 🎨 Excalidraw Library
-
-My Excalidraw library includes custom shapes and diagrams. You can add it to Excalidraw using the [`Extra/library.excalidrawlib`](Extra/library.excalidrawlib) file.
-
-![Excalidraw Library Example](Extra/Images/excalidraw.png)
-
----
-
-## 11. 🍏 Apple Shortcuts
-
-* **[OCR](https://www.icloud.com/shortcuts/5e3090a8d4b0457da506f48e745a2028)** — Copies text from the screen.
-
-> I recommend assigning the shortcut to `Cmd + Shift + 2` for quick access.

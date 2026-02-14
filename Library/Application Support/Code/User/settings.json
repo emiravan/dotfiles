@@ -43,6 +43,8 @@
   "breadcrumbs.icons": false,
   "editor.cursorBlinking": "solid",
   "editor.lineNumbers": "relative",
+  "update.showReleaseNotes": false,
+  "github.copilot.nextEditSuggestions.enabled": true,
 
   // FORMATTING
   "editor.formatOnSave": true,
@@ -115,6 +117,5 @@
     }
   ],
   "42header.email": "avanemir@icloud.com",
-  "42header.username": "emiravan",
-  "github.copilot.nextEditSuggestions.enabled": true
+  "42header.username": "emiravan"
 }

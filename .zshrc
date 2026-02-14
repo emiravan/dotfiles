@@ -19,7 +19,6 @@ source $ZSH/oh-my-zsh.sh
 
 alias cd='z'
 alias update='brew update && brew upgrade'
-alias yt="yt-dlp -o '~/Downloads/%(title)s.%(ext)s' -f 'bestvideo+bestaudio'"
 
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
